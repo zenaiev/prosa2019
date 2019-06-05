@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{a4}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{cite}
+%\usepackage{draftwatermark}
+\usepackage{lineno}
+%\usepackage{chngcntr}
+%\linenumbers
+
+
+\usepackage{color}
+\usepackage{colordvi}
+
+\graphicspath{{Pics/}}
+\DeclareGraphicsExtensions{.eps,.ps}
+
+\textheight 22.0cm \textwidth 16.5cm
+\oddsidemargin -0.1cm \evensidemargin -0.1cm
+
+\usepackage{pslatex}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{url}
+
+\newcommand{\msbar}{$\overline{\text{MS}}\, $}
+
+%
+% ----------------------------------------------------------------------------------------------
+%
+\begin{document}
+
+\begin{titlepage}
+\noindent
+Draft 0.1  \hfill 05 June 2019\\
+\\
+DESY AA-BBB %\hfill  2019\\
+\\
+
+\vspace{1.3cm}
+
+\begin{center}
+  {\bf 
+
+\large
+
+Extraction of parton distribution functions using recent LHCb and ALICE heavy-flavour measurements
+  }
+  \vspace{1.5cm}
+
+  {\large
+    PROSA Collaboration
+  }\\
+
+  \vspace{1.2cm}
+
+\end{center}
+ %\input{authors.tex}  
+  \vspace{2.4cm}
+\begin{center}
+\large
+{\bf Abstract}
+\vspace{-0.2cm}
+\end{center}
+%%
+..............................
+%%
+\vfill
+\end{titlepage}
+
+
+%
+% ----------------------------------------------------------------------------------------------
+%
+\newpage
+
+\section{Introduction}
+\label{sect:intro}
+
+\section{Details of the QCD analysis}
+\label{sec:th}
+
+The following data sets are used in the present analysis:
+\begin{itemize}
+    \item combined Neutral Current (NC) and Charged Current (CC) inclusive DIS cross sections by H1 and ZEUS~\cite{}
+    \item combined charm and beauty NC DIS cross sections by H1 and ZEUS~\cite{}
+    \item measurements of charm hadroproduction by LHCb at 5 TeV~\cite{}, 7 TeV~\cite{} and 13 TeV~\cite{}, and by ALICE at 5 TeV~\cite{} and 7 TeV~\cite{}
+    \item measurements of beauty hadroproduction by LHCb at 7 TeV~\cite{}.
+\end{itemize}
+Compared to the previous PROSA analysis~\cite{}, this analysis uses more measurements of charm hadroproduction\footnote{Since the main objective of the present analysis is to constrain the gluon PDF at low values of $x$, there was no intention to include other LHC measurements of beauty hadroproduction.}
+and using the final (and more precise) combined HERA data on inclusive NC and CC DIS, and heavy-quark production in NC DIS.
+
+For the LHCb and ALICE data, the normalised cross sections, $\frac{{\rm d}\sigma}{{\rm d}y} / \frac{{\rm d}\sigma}{{\rm d}y_0}$, are calculated from the absolute cross sections and are used in the 
+QCD analysis, with $\frac{{\rm d}\sigma}{{\rm d}y_0}$ being the cross section in the center bin, $3 < y < 3.5$, of 
+the measured rapidity range in each $p_T$ bin (in particular, ALICE cross sections at $|y| < 0.5$ are normalised to LHCb cross sections at $3 < y < 3.5$). 
+The advantage of using the normalised cross section, as was motivated in~\cite{}, is a significant
+reduction of the scale dependence of the theoretical prediction, retaining the sensitivity of the cross sections to 
+the PDFs. 
+
+The treatment of experimental uncertainties for the HERA data follow the original publications~\cite{}.
+For the ALICE and LHCb data, those uncertainties which are reported as single numbers (independent of $p_T$ and $y$ bins) are treated as correlated, and uncorrelated uncertainties are obtained by subtracting the correlated ones from the total uncertainty. Furthermore, for the normalised cross sections the uncorrelated uncertainty 
+on $\frac{{\rm d}\sigma}{{\rm d}y_0}$ is propagated as a correlated uncertainty to the respective complementary 
+rapidity bins. 
+
+The analysis is performed at NLO (highest available order for heavy-quark hadroproduction) in the fixed-flavour-number scheme with three active flavours.
+Theoretical calculations for the HERA data sets follow Ref.~\cite{}.
+Theoretical calculations for heavy-quark hadroproduction follow the previous PROSA analysis~\cite{}, with the only change is that we are using the \msbar mass scheme.
+The predictions are computed using the MNR code for single-particle inclusive distributions in the pole mass scheme, with the transition from the pole to the \msbar masses as described in~\cite{}. These calculations are interfaced in xFitter. The factorisation and renormalisation scales are chosen to be $\mu_r = \mu_f = \sqrt{4m_Q(m_Q)^2+p_T^2}$. The heavy-quark masses are free in the fit. The calculations are supplemented with phenomenological non-pertutbative fragmentation functions to describe the transition of heavy quarks into hadrons. The fragmentation of charm quarks into D-mesons is described by the Kartvelishvili function with $\alpha_K = 4.4 m 1.7$ as measured at HERA~\cite{},
+while for the fragmentation of beauty quarks $\alpha_K = 11 m 3$ is used as measured at LEP~\cite{}.
+
+The PDFs are parametrised at the starting scale $\mu^2_{f0} = 1.9$~GeV$^2$ of QCD evolution as:
+\begin{equation}\begin{aligned}
+xg(x) &= A_{g} x^{B_{g}}\,(1-x)^{C_{g}}\, (1 + F_{g} {\textrm{ln} x}),\\
+u_\mathrm{v}(x) &= A_{u_\mathrm{v}}x^{B_{u_\mathrm{v}}}\,(1-x)^{C_{qu_\mathrm{v}}}\,(1+D_{u_\mathrm{v}}x) ,\\
+d_\mathrm{v}(x) &= A_{d_\mathrm{v}}x^{B_{d_\mathrm{v}}}\,(1-x)^{C_{qd_\mathrm{v}}},\\
+x\overline{\mathrm{U}}(x)&= A_{\overline{\mathrm{U}}}x^{B_{\overline{\mathrm{U}}}}\, (1-x)^{C_{\overline{\mathrm{U}}}}\, (1+D_{\overline{\mathrm{U}}}x), \\
+x\overline{\mathrm{D}}(x)&= A_{\overline{\mathrm{D}}}x^{B_{\overline{\mathrm{D}}}}\, (1-x)^{C_{\overline{\mathrm{D}}}}.
+\end{aligned}
+\label{eq:dv}
+\end{equation}
+Here $xg(x)$ is the gluon distribution, $xqu_{\mathrm{v}}(x)$ and $xqd_{\mathrm{v}}(x)$ are the up and down quark valence quark distributions, respectively, and $x\overline{\mathrm{U}}(x)$ and $x\overline{\mathrm{D}}(x)$ are 
+the up- and down-type antiquark distributions, respectively, assuming relations $x\overline{\mathrm{U}}(x) = xaqu(x)$ and $x\overline{\mathrm{D}}(x) = xd(x) + xs(x)$, with $xu(x)$, $xd(x)$, and $xs(x)$ are the up, down, and strange antiquark distributions, respectively.
+The sea quark distribution is defined as $x\Sigma(x)=xu(x)+xd(x)+xs(x)$.
+The normalisation parameters $A_{u_{\mathrm{v}}}$, $A_{d_\mathrm{v}}$, and $A_{g}$ are determined by the QCD sum rules.
+Additional constraints $B_{\overline{\mathrm{U}}} = B_{\overline{\mathrm{D}}}$ and
+$A_{\overline{\mathrm{U}}} = A_{\overline{\mathrm{D}}}(1 - f_{s})$ are imposed to ensure the same normalisation
+for the $xu$ and $xd$ distributions as $x \to 0$.
+The strangeness fraction $f_{s} = xs/( xd + xs)$ is fixed to
+$f_{s}=0.4$ as in the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}.
+
+The parameters in Eq.~(\ref{eq:dv}) are selected by first fitting with all polynomial parameters set to zero,
+and then including them independently one at a time in the fit until the $\chi^2$ of the fit is improved.
+The procedure is stopped when no further improvement is observed.
+The $\chi^2$ definition used for the HERA DIS data follows that of Eq.~(32) in Ref.~\cite{Abramowicz:2015mha}.
+For the heavy-quark normalised cross sections, the experimental uncertainties are treated as additive, and the treatment of the experimental uncertainties for the HERA DIS data follows the prescription given in Ref.~\cite{Abramowicz:2015mha}.
+
+According to the general approach of the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}, 
+the fit, model, and parametrisation uncertainties are taken into account.
+Fit uncertainties are determined using the criterion of $\Delta\chi^2 = 1$.
+Model uncertainties are determined by varying the strangeness fraction $0.3 \leq f_{s} \leq 0.5$, the value of $Q^2_{\text{min}}$ imposed on the HERA data, $2.5 \leq Q^2_\textrm{min}\leq 5.0\textrm{GeV}^2$, and the scales for heavy quark production.
+The latter was varied up and down by a factor of two both simultaneously and independently for $\mu_r$ and $\mu_f$, and it was found that the simultaneous variation of $\mu_r$ and $\mu_f$ results in a larger PDF uncertainty. Thus, the simultaneous $\mu_r$ and $\mu_f$ variation is used as a PDF uncertainty eigenvector.
+The parametrisation uncertainty is estimated by extending the functional form in Eq.~(\ref{eq:dv}) with additional polynomial parameters, which are added or removed one at a time and do not improve the $\chi^2$.
+Additionally, the parametrisation uncertainty is determined by varying $1.6 < \mu_\mathrm{f0}^2 < 2.2$~GeV$^2$.
+The parametrisation uncertainty is constructed as an envelope, built from the maximal differences between the PDFs or QCD parameters resulting from the central fit and all parametrisation variations.
+The total uncertainty is obtained by adding the fit, model, and parametrisation uncertainties in quadrature.
+
+
+\section*{Acknowledgements}
+
+%  We would like to thank ...
+The work of O.~Z. has been supported by Bundesministerium f\"ur Bildung und Forschung (contract 05H18GUCC1).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{plain}
+\bibliography{prosa2019}
+
+\end{document}
+
+
