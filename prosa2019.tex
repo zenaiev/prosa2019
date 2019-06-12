@@ -7,6 +7,7 @@
 \usepackage{cite}
 %\usepackage{draftwatermark}
 \usepackage{lineno}
+\usepackage{xspace}
 %\usepackage{chngcntr}
 %\linenumbers
 
@@ -26,7 +27,7 @@
 \usepackage{amssymb}
 \usepackage{url}
 
-\newcommand{\msbar}{$\overline{\text{MS}}\, $}
+\newcommand{\msbar}{$\overline{\text{MS}}\, $\xspace}
 
 %
 % ----------------------------------------------------------------------------------------------
@@ -85,7 +86,7 @@ Extraction of parton distribution functions using recent LHCb and ALICE heavy-fl
 The QCD analysis consists of extraction input theoretical parameters (the PDF parameters and the quark masses) by minimising the $\chi^2$ between  data and theoretical predictions. 
 It is performed using the xFitter framework~\cite{Alekhin:2014irh}. 
 The $\chi^2$ minimisation is performed using the MINUIT package~\cite{James:1975dr} interfaced in xFitter.
-The main objective of the QCD analysis is to constrain the gluon PDF in the proton at very low $x$ (up to $x \sim 10^{-6}$) by using measurements of charm hadroproduction. This provides a PDF set which can be reliably used in applications which require knowledge of the low-$x$ gluon, such as some astrophysical calculations~\cite{Garzelli:2015psa,Gauld:2015yia,Gauld:2015kvh,Garzelli:2016xmx,Bertone:2018dse} and MC underlying event tuning [any reference?].
+The main objective of the QCD analysis is to constrain the gluon PDF in the proton at very low $x$ (up to $x \sim 10^{-6}$) by using measurements of charm hadroproduction. This provides a PDF set which can be reliably used in applications which require knowledge of the low-$x$ gluon, such as predictions for the FCC~\cite{Mangano:2016jyj}, various astrophysical calculations (for example~\cite{Garzelli:2015psa,Gauld:2015yia,Gauld:2015kvh,Garzelli:2016xmx,Bertone:2018dse}) and MC underlying event tuning [any reference?].
 
 \subsection{Input data}
 \label{sec:data}
@@ -97,11 +98,12 @@ The following data sets are used in the present analysis:
     \item measurements of charm hadroproduction by LHCb at 5 TeV~\cite{Aaij:2016jht}, 7 TeV~\cite{Aaij:2013mga} and 13 TeV~\cite{Aaij:2015bpa}, and by ALICE at 5 TeV~\cite{Acharya:2019mgn} and 7 TeV~\cite{Acharya:2017jgo}
     \item measurements of beauty hadroproduction by LHCb at 7 TeV~\cite{Aaij:2013noa}.
 \end{itemize}
-Compared to the previous PROSA analysis~\cite{Zenaiev:2015rfa}, this analysis uses more measurements of charm hadroproduction,\footnote{Since the main objective of the present analysis is to constrain the gluon PDF at low values of $x$ using the new LHC measurements of charm production, there was no intention to include other LHC measurements of beauty hadroproduction apart from those which were included in the previous analysis~\cite{Zenaiev:2015rfa}.}
+Compared to the previous PROSA analysis~\cite{Zenaiev:2015rfa}, this analysis uses more measurements of charm hadroproduction,
+%\footnote{Since the main objective of the present analysis is to constrain the gluon PDF at low values of $x$ using the new LHC measurements of charm production, there was no intention to include other LHC measurements of beauty hadroproduction apart from those which were included in the previous analysis~\cite{Zenaiev:2015rfa}.}
 as well as the final (and more precise) combined HERA data on inclusive NC and CC DIS, and heavy-quark production in NC DIS.
 
-For the LHCb and ALICE data, the normalised cross sections as a function of rapidity, $\frac{{\rm d}\sigma}{{\rm d}y} / \frac{{\rm d}\sigma}{{\rm d}y_0}$, are calculated from the absolute cross sections and are used in the 
-QCD analysis, with $\frac{{\rm d}\sigma}{{\rm d}y_0}$ being the cross section in the center bin, $3 < y < 3.5$, of 
+For the LHCb and ALICE data, the normalised cross sections as a function of rapidity, $\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T} / (\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T})_{0}$, are calculated from the absolute cross sections and are used in the 
+QCD analysis, with $\left(\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T}\right)_{0}$ being the cross section in the center LHCb rapidity bin, $3 < y < 3.5$, of 
 the measured rapidity range in each $p_T$ bin (in particular, ALICE cross sections at $|y| < 0.5$ are normalised to LHCb cross sections at $3 < y < 3.5$). 
 The advantage of using the normalised cross section, as was demonstrated in~\cite{Zenaiev:2015rfa}, is a significant
 reduction of the scale dependence of the theoretical prediction, retaining the sensitivity of the cross sections to 
@@ -111,7 +113,7 @@ Bin-to-bin correlations in the input measurements are taken into account.
 The treatment of correlated experimental uncertainties for the HERA data follows the original publications~\cite{Abramowicz:2015mha,H1:2018flt}.
 For the ALICE and LHCb data, those correlated uncertainties which are reported as single numbers for all of $p_T$ and $y$ bins are treated as fully correlated, and uncorrelated uncertainties are obtained by subtracting the correlated ones from the total uncertainty. 
 However, those systematic uncertainties which are reported as intervals are assumed to be uncorrelated, because the LHCb and ALICE publications do not provide information about their size in individual $p_T$ and $y$ bins. 
-This missing information is mandatory for qualitative comparison to theoretical predictions (e.g.\ by means of the $\chi^2$ test) and future interpretation of precision measurements, and we encourage the LHC experiments to publish all eigenvectors of correlated uncertainties in individual bins (e.g.\ as the H1 and ZEUS experiments did in~\cite{Abramowicz:2015mha,H1:2018flt}).
+This missing information is mandatory for quantitative comparison to theoretical predictions (e.g.\ by means of the $\chi^2$ test) and future interpretation of precision measurements, and we encourage the LHC experiments to publish all eigenvectors of correlated uncertainties in individual bins (e.g.\ as the H1 and ZEUS experiments did in~\cite{Abramowicz:2015mha,H1:2018flt}).
 In the QCD fit, for the normalised ALICE and LHCb cross sections the uncorrelated uncertainties on $\frac{{\rm d}\sigma}{{\rm d}y_0}$ are propagated as correlated uncertainties to the respective complementary rapidity bins. 
 
 The $\chi^2$ definition follows that of Eq.~(32) in Ref.~\cite{Abramowicz:2015mha}.
@@ -120,20 +122,22 @@ For the heavy-quark normalised cross sections, the experimental uncertainties ar
 \subsection{Theoretical calculations}
 \label{sec:th}
 
-The analysis is performed at NLO (highest available order for heavy-quark hadroproduction) in the fixed-flavour-number scheme with three active flavours.
+The analysis is performed at NLO (highest available fixed order for fully differential heavy-quark hadroproduction) in the fixed-flavour-number scheme with three active flavours.
+In addition, we perform a fit using a variable-flavour-number scheme (VFNS), described in Appendix. These PDFs might be useful for MC underlying event tuning.
+The \msbar mass scheme is consistently used in the calculations for all data sets.
 The PDFs are parametrised at the starting scale as described in Section~\ref{sec:pdfparam} and evolved to higher scales using the QCDNUM program~\cite{Botje:2010ay}.
-Theoretical calculations for the HERA data sets are obtained using OPENQCDRAD~\cite{openqcdrad} following Ref.~\cite{H1:2018flt}.
+Theoretical calculations to be compared to the HERA data sets are obtained using OPENQCDRAD~\cite{openqcdrad} following Ref.~\cite{H1:2018flt}.
 
 Theoretical calculations for heavy-quark hadroproduction follow the previous PROSA analysis~\cite{Zenaiev:2015rfa}, with the only change is that we are using the \msbar mass scheme.
 The predictions are computed using the MNR code for single-particle inclusive distributions in the pole mass scheme~\cite{Dowling:2013baa}, with the transition from the pole to the \msbar masses as described in~\cite{Dowling:2013baa}.
-The factorisation and renormalisation scales are chosen to be $\mu_r = \mu_f = \sqrt{4m_Q(m_Q)^2+p_T^2}$, where $4m_Q(m_Q)$ is the \msbar heavy-quark mass. The heavy-quark masses are free parameters in the fit. 
+The factorisation and renormalisation scales are chosen to be $\mu_r = \mu_f = \sqrt{4m_Q(m_Q)^2+p_T^2}$, where $m_Q(m_Q)$ is the \msbar heavy-quark mass. The heavy-quark \msbar masses are free parameters in the fit. 
 The calculations are supplemented with phenomenological non-pertutbative fragmentation functions to describe the transition of heavy quarks into hadrons. 
-As in the previous PROSA analysis~\cite{Zenaiev:2015rfa}, the fragmentation of charm quarks into D-mesons is described by the Kartvelishvili function with $\alpha_K = 4.4 \pm 1.7$ as measured at HERA~\cite{Aaron:2008ac,Chekanov:2008ur}, and for the fragmentation of beauty quarks $\alpha_K = 11 \pm 3$ is used as measured at LEP~\cite{Nason:1999zj}.
+The fragmentation of charm quarks into D-mesons is described by the Kartvelishvili function with $\alpha_K = 4.4 \pm 1.7$ as measured at HERA~\cite{Aaron:2008ac,Chekanov:2008ur}, and for the fragmentation of beauty quarks $\alpha_K = 11 \pm 3$ is used as measured at LEP~\cite{Nason:1999zj}, following the previous PROSA analysis~\cite{Zenaiev:2015rfa}
 
 \subsection{PDF parametrisation}
 \label{sec:pdfparam}
 
-The gluon, valence quark and sea quark PDFs are parametrised at the starting scale $\mu^2_{f0} = 1.9$~GeV$^2$ of QCD evolution following Refs.~\cite{Abramowicz:2015mha}:
+The gluon, valence quark and sea quark PDFs are parametrised at the starting scale $\mu^2_{f0} = 1.9$~GeV$^2$ of QCD evolution following Ref.~\cite{Abramowicz:2015mha} and Ref.~\cite{Bonvini:2019wxf}:
 \begin{equation}\begin{aligned}
 xg(x) &= A_{g} x^{B_{g}}\,(1-x)^{C_{g}}\, (1 + F_{g} {\log x}),\\
 u_\mathrm{v}(x) &= A_{u_\mathrm{v}}x^{B_{u_\mathrm{v}}}\,(1-x)^{C_{u_\mathrm{v}}}\,(1+D_{u_\mathrm{v}}x) ,\\
@@ -150,9 +154,10 @@ The normalisation parameters $A_{u_{\mathrm{v}}}$, $A_{d_\mathrm{v}}$, and $A_{g
 The strangeness fraction $f_{s} = x\overline{s}/( x\overline{d} + x\overline{s})$ is fixed to
 $f_{s}=0.4$ as in the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}.
 Additional constraints $B_{\overline{\mathrm{U}}} = B_{\overline{\mathrm{D}}}$ and $A_{\overline{\mathrm{U}}} = A_{\overline{\mathrm{D}}}(1 - f_{s})$ are imposed to ensure the same normalisation for the $x\overline{u}$ and $x\overline{d}$ distributions as $x \to 0$.
+The $F_g\log x$ term was proposed in~\cite{Bonvini:2019wxf} to provide a more flexible functional form at low $x$.
 
-The parameters in Eq.~(\ref{eq:dv}) are selected by first fitting with all parameters except $A$, $B$ and $C$ set to zero, and then including additional polynomial parameters one at a time until the $\chi^2$ of the fit is improved.
- The only exception is the $F_{g}$ parameter which does not improve the $\chi^2$ sizably (i.e.\ its fitted value is consistent with $0$ within uncertainty), but it affects the fit uncertainties significantly. The $F_g\log x$ term was proposed in~\cite{Bonvini:2019wxf} to provide a more flexible functional form at low $x$.
+The parameters in Eq.~(\ref{eq:dv}) are selected by first fitting the data with all parameters except $A$, $B$ and $C$ set to zero, and then including additional polynomial parameters only one at a time until the $\chi^2$ of the fit is improved.
+ The only exception is the $F_{g}$ parameter which does not improve the $\chi^2$ sizably (i.e.\ its fitted value is consistent with $0$ within uncertainty), but its variation affects the fit uncertainties significantly.
  
 A special study was done to ensure the gluon PDF at low $x$ is not overconstrained: we parametrised the gluon distribution using functional forms from the ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, HERAPDF2.0~\cite{Abramowicz:2015mha} and MMHT2014~\cite{Harland-Lang:2014zoa} PDF fits:
 \begin{equation}
@@ -171,12 +176,13 @@ These functional forms are characterised by $4$ (ABMP16), $5$ (CT14, HERAPDF2.0)
 According to the general prescription used in the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}, 
 the fit, model, and parametrisation uncertainties are taken into account.
 Fit uncertainties are determined using the criterion of $\Delta\chi^2 = 1$ and the HESSE algorithm.
-Model uncertainties are determined by varying the strangeness fraction $0.3 \leq f_{s} \leq 0.5$, the value of $Q^2_{\text{min}}$ imposed on the HERA data by $2.5 \leq Q^2_\textrm{min}\leq 5.0\textrm{GeV}^2$, the strong coupling constant by $0.105 < \alpha_s^{n_f=3}(M_Z) < 0.107$ (which corresponds to $0.117 < \alpha_s^{n_f=5}(M_Z) < 0.119$~\cite{Tanabashi:2018oca}), the fragmentation parameters $\alpha_K = 4.4 \pm 1.7$ for charm hadrons and $\alpha_K = 11 \pm 3$ for beauty hadrons, and the scales $\mu_f$ and $\mu_r$ for heavy quark production.
-Originally the latter are varied up and down by a factor of two both simultaneously and independently for $\mu_r$ and $\mu_f$, however it was found that the simultaneous variation of $\mu_r$ and $\mu_f$ results in a larger PDF uncertainty in the bulk of the $x$ range. 
+Model uncertainties are determined by varying the strangeness fraction $0.3 \leq f_{s} \leq 0.5$~\cite{Abramowicz:2015mha}, the value of $Q^2_{\text{min}}$ imposed on the HERA data by $2.5 \leq Q^2_\textrm{min}\leq 5.0\textrm{GeV}^2$~\cite{Abramowicz:2015mha}, the strong coupling constant by $0.105 < \alpha_s^{n_f=3}(M_Z) < 0.107$ (which corresponds to $0.117 < \alpha_s^{n_f=5}(M_Z) < 0.119$~\cite{Tanabashi:2018oca}), the fragmentation parameters $\alpha_K = 4.4 \pm 1.7$ for charm hadrons and $\alpha_K = 11 \pm 3$ for beauty hadrons, and the scales $\mu_f$ and $\mu_r$ for heavy quark production.
+Originally the latter are varied up and down by a factor of two both simultaneously and independently for $\mu_r$ and $\mu_f$, however it was found that the simultaneous variation of $\mu_r$ and $\mu_f$ results in a larger PDF uncertainty in the bulk of the $x$ range.%
+\footnote{This is different from the typical picture observed for unnormalised heavy-quark production cross sections, in particular, because the $\mu_r$ variations largely cancel for the normalised cross sections as demonstrated in Ref.~\cite{Zenaiev:2015rfa}.}
 Therefore only the simultaneous $\mu_r$ and $\mu_f$ variation is used as a PDF uncertainty eigenvector.
 The parametrisation uncertainty is estimated by extending the functional form in Eq.~(\ref{eq:dv}) with additional polynomial parameters, which are added or removed one at a time and do not improve the $\chi^2$. 
 Also the gluon PDF is extended by adding the $+G_g\log^2 x$ term~\cite{Bonvini:2019wxf} (which does not improve the $\chi^2$ either; this term is not used in the nominal parametrisation, because the fit becomes unstable once even more additional parameters are introduced when determining parametrisation uncertainties).
-Additionally, the parametrisation uncertainty is determined by varying $1.6 < \mu_\mathrm{f0}^2 < 2.2$~GeV$^2$.
+Additionally, the $1.6 < \mu_\mathrm{f0}^2 < 2.2$~GeV$^2$ variation~\cite{Abramowicz:2015mha} is taken as the parametrisation uncertainty.
 The parametrisation uncertainty is constructed as an envelope, built from the maximal differences between the PDFs or QCD parameters resulting from the central fit and all parametrisation variations.
 The total uncertainty is obtained by adding the fit, model, and parametrisation uncertainties in quadrature.
 
@@ -272,12 +278,14 @@ The fitted PDFs with their total uncertainties at the scale $\mu^2_f=10$ GeV$^2$
 A significant reduction of the gluon PDF uncertainty is achieved at $x < 10^{-4}$ compared to the PROSA 2015 fit. 
 The results of the two fits for the gluon PDF are in good agreement: the central value from the new fit is always within the PROSA 2015 uncertainty band. 
 The changes of the valence and sea quark distributions are attributed to the replacement of the HERA-I DIS data which were used in the PROSA 2015 fit with the new combined final HERA data and are consistent with the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}: the shape of the valence distributions is harder, while the sea distribution of the new fit at high x is softer. 
-To check further the new PDFs, we have calculated prediction for H1, ZEUS and CMS measurements of jet production, and CMS measurement of $t\bar{t}$ production which are implemented in xFitter using our VFNS fit (see Appendix), and found the new PDFs describe all these data sets better than the predictions obtained using HERAPDF2.0.
+We have checked performance of the new PDFs by computing predictions for H1, ZEUS and CMS measurements of jet production, and CMS measurement of $t\bar{t}$ production which are implemented in xFitter, and find it to be similar to the one of HERAPDF2.0.%
+\footnote{We used our VFNS fit for this comparison.}
+%To check further the new PDFs, we have calculated prediction for H1, ZEUS and CMS measurements of jet production, and CMS measurement of $t\bar{t}$ production which are implemented in xFitter using our VFNS fit (see Appendix), and found the new PDFs describe all these data sets better than the predictions obtained using HERAPDF2.0.
 
 The relative total, fit, model and parametrisation uncertainties for the gluon PDF are shown in Fig.~\ref{fig:pdfratios} (right). The total uncertainties are dominated by the model uncertainties, with the largest contributions to the latter given by the scale variations for heavy-quark hadroproduction. Higher order calculations are needed to reduce these uncertainties.
 
 The resulting PDFs are available in the LHAPDF format at [\dots].
-In addition, we perform a fit using a variable-flavour-number scheme (VFNS), described in Appendix. These PDFs might be useful for MC underlying event tuning.
+%In addition, we perform a fit using a variable-flavour-number scheme (VFNS), described in Appendix. These PDFs might be useful for MC underlying event tuning.
 
 \begin{figure}
     \centering
@@ -321,7 +329,7 @@ The work of O.~Z. has been supported by Bundesministerium f\"ur Bildung und Fors
 
 The fit in the VFNS is performed using the APFEL library~\cite{Bertone:2013vaa} interfaced in xFitter.
 The theoretical predictions for the HERA data are computed using the FONLL-B scheme~\cite{Forte:2010ta} with the pole charm and beauty quark masses set to $m_c^{\textrm{pole}} = 1.4$ GeV and $m_c^{\textrm{pole}} = 4.5$ GeV respectively.
-However, no VFNS calculation for heavy-quark hadroproduction is available publicly in the format which can be used for PDF fitting.
+However, no VFNS calculation for heavy-quark hadroproduction is interfaced to public tools and can be used for PDF fitting.
 To keep using the MNR calculations with the VFNS, we exploit the feature of the APFEL library to choose arbitrary heavy-quark matching thresholds~\cite{Bertone:2017ehk}. These thresholds are set to values:
 \begin{equation}
 \begin{aligned}
