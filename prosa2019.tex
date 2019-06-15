@@ -36,7 +36,7 @@
 
 \begin{titlepage}
 \noindent
-Draft 0.1  \hfill 05 June 2019\\
+Draft 0.2  \hfill 15 June 2019\\
 \\
 DESY AA-BBB %\hfill  2019\\
 \\
@@ -159,16 +159,19 @@ The $F_g\log x$ term was proposed in~\cite{Bonvini:2019wxf} to provide a more fl
 The parameters in Eq.~(\ref{eq:dv}) are selected by first fitting the data with all parameters except $A$, $B$ and $C$ set to zero, and then including additional polynomial parameters only one at a time until the $\chi^2$ of the fit is improved.
  The only exception is the $F_{g}$ parameter which does not improve the $\chi^2$ sizably (i.e.\ its fitted value is consistent with $0$ within uncertainty), but its variation affects the fit uncertainties significantly.
  
-A special study was done to ensure the gluon PDF at low $x$ is not overconstrained: we parametrised the gluon distribution using functional forms from the ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, HERAPDF2.0~\cite{Abramowicz:2015mha} and MMHT2014~\cite{Harland-Lang:2014zoa} PDF fits:
+A special study was done to ensure the gluon PDF at low $x$ is not overconstrained: we parametrised the gluon distribution using functional forms from the ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, HERAPDF2.0~\cite{Abramowicz:2015mha}, MMHT2014~\cite{Harland-Lang:2014zoa} and Bonvini-Giuli (BG)~\cite{Bonvini:2019wxf} PDF fits:
 \begin{equation}
 \begin{aligned}
 \textrm{ABMP16:}~~~~~~ &xg(x)=A (1 - x)^b x^{a (1 + \gamma_{1} x)},\\
 \textrm{CT14:}~~~~~~ &xg(x) = Ax^{a_1}(1-x)^{a_2}(e_0(1-y)^2+e_1(2y(1-y))+y^2), y=2\sqrt{x}-x,\\
-\textrm{MMHT2014:}~~~~~~ &xg(x) = Ax^B(1-x)^C(1+a_1x+a_2(2x^2-1))+A^{\prime}_gx^{B^{\prime}_g}(1-x)^{25},\\ 
-\textrm{HERAPDF2.0:}~~~~~~ &xg(x)=A_gx^{B_g}(1-x)^{C_g}+A^{\prime}_gx^{B^{\prime}_g}(1-x)^{25}.
+\textrm{MMHT2014:}~~~~~~ &xg(x) = Ax^B(1-x)^C(1+a_1y+a_2(2y^2-1))+A^{\prime}_gx^{B^{\prime}_g}(1-x)^{25}, y=1-2\sqrt{x},\\ 
+\textrm{HERAPDF2.0:}~~~~~~ &xg(x)=A_gx^{B_g}(1-x)^{C_g}+A^{\prime}_gx^{B^{\prime}_g}(1-x)^{25},\\
+\textrm{HERAPDF2.0 no flex. $g$:}~~~~~~ &xg(x)=A_gx^{B_g}(1-x)^{C_g},\\
+\textrm{BG:}~~~~~~ &xg(x)=A_{g} x^{B_{g}}\,(1-x)^{C_{g}}\, (1 + F_{g} {\log x} + G_{g} {\log^2 x}),\\
 \end{aligned}
+\label{eq:gluonpar}
 \end{equation}
-These functional forms are characterised by $4$ (ABMP16), $5$ (CT14, HERAPDF2.0) or $7$ (MMHT2014) parameters which control the gluon PDF (c.f.\ $4$ parameters in out nominal parametrisation in Eq.~\ref{eq:dv}). The fit using the HERAPDF2.0 and CT14 parametrisations yielded a gluon distribution with a sharp turnover to negative values at $x \sim 10^{-6}$, i.e.\ at the edge of the data sensitivity. As a result, such PDFs would predict a negative total charm hadroproduction cross sections at $\sqrt{s} \gtrsim 20$~TeV, as was already observed in~\cite{Garzelli:2015psa,Accardi:2016ndt}, therefore these parametrisations are discarded. The MMHT2014 parametrisation is similar to the HERAPDF2.0 parametrisation at low $x$, but the former is more flexible at high $x$. Our fit can not converge using the MMHT2014 parametrisation because there are not enough data to constrain the gluon PDF at high $x$, while discarding the extra parameters of the MMHT2014 parametrisation which control the high-$x$ gluon would result in the HERAPDF2.0 parametrisation. The ABMP16 parametrisation provides very similar results as our nominal parametrisation from Eq.~\ref{eq:dv}.
+These functional forms are characterised by $3$ (HERAPDF2.0 no flex. $g$), $4$ (ABMP16), $5$ (CT14, HERAPDF2.0, BG) or $7$ (MMHT2014) parameters which control the gluon PDF (c.f.\ $4$ parameters in out nominal parametrisation in Eq.~\ref{eq:dv}). The fit using the HERAPDF2.0 and CT14 parametrisations yielded a gluon distribution with a sharp turnover to negative values at $x \sim 10^{-6}$, i.e.\ at the edge of the data sensitivity. As a result, such PDFs would predict a negative total charm hadroproduction cross sections at $\sqrt{s} \gtrsim 20$~TeV, as was already observed in~\cite{Accardi:2016ndt} for the HERAPDF set, therefore these parametrisations are discarded. The MMHT2014 parametrisation is similar to the HERAPDF2.0 parametrisation at low $x$, but the former is more flexible at high $x$. Our fit can not converge using the MMHT2014 parametrisation because there are not enough data to constrain the gluon PDF at high $x$, while discarding the extra parameters of the MMHT2014 parametrisation which control the high-$x$ gluon would result in the HERAPDF2.0 parametrisation. The HERAPDF2.0 no flex. $g$, ABMP16 and BG parametrisation provides very similar results as our nominal parametrisation from Eq.~\ref{eq:dv}. All fitted gluon distributions are compared in Fig.~\ref{fig:gluonpar} in Appendix.
 
 \subsection{Uncertainties}
 \label{sec:pdfparam}
@@ -281,6 +284,7 @@ The changes of the valence and sea quark distributions are attributed to the rep
 We have checked performance of the new PDFs by computing predictions for H1, ZEUS and CMS measurements of jet production, and CMS measurement of $t\bar{t}$ production which are implemented in xFitter, and find it to be similar to the one of HERAPDF2.0.%
 \footnote{We used our VFNS fit for this comparison.}
 %To check further the new PDFs, we have calculated prediction for H1, ZEUS and CMS measurements of jet production, and CMS measurement of $t\bar{t}$ production which are implemented in xFitter using our VFNS fit (see Appendix), and found the new PDFs describe all these data sets better than the predictions obtained using HERAPDF2.0.
+The fitted PDFs at the starting scale are shown in Fig.~\ref{fig:pdfs19} in Appendix.
 
 The relative total, fit, model and parametrisation uncertainties for the gluon PDF are shown in Fig.~\ref{fig:pdfratios} (right). The total uncertainties are dominated by the model uncertainties, with the largest contributions to the latter given by the scale variations for heavy-quark hadroproduction. Higher order calculations are needed to reduce these uncertainties.
 
@@ -293,7 +297,7 @@ The resulting PDFs are available in the LHAPDF format at [\dots].
     \includegraphics[width=0.49\textwidth]{figs/q2_10_pdf_dv.pdf}\\
     \includegraphics[width=0.49\textwidth]{figs/q2_10_pdf_g.pdf}
     \includegraphics[width=0.49\textwidth]{figs/q2_10_pdf_Sea.pdf}
-    \caption{The fitted PDFs with their total uncertainties at the scale $\mu^2_f=10$ GeV$^2$ compared with the distributions form the PROSA 2015 fit.}
+    \caption{The fitted PDFs with their total uncertainties at the scale $\mu^2_f=10$ GeV$^2$ compared with the distributions from the PROSA 2015 fit.}
     \label{fig:pdfs}
 \end{figure}
 
@@ -342,8 +346,31 @@ The choice of the matching thresholds is arbitrary and amounts to a renormalisat
 
 The resulting PDFs are available in the LHAPDF format at [\dots]. No PDF uncertainties are provided with this set.
 
+\section{Additional plots}
+\label{sec:extraplots}
 
+{\color{blue}(These plots provided on request of M.V.: do we want them in the paper?)}
 
+The fitted PDFs with their total uncertainties at the starting scale of PDF evolution $\mu^2_f=1.9$~GeV$^2$ are shown in Fig.~\ref{fig:pdfs19}, superimposed with the PDFs from the PROSA 2015 fit~\cite{Zenaiev:2015rfa}.
+The gluon distribution obtained in the fit using different parametrisations (see Eq.~\ref{eq:gluonpar}) are shown on Fig.~\ref{fig:gluonpar}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.49\textwidth]{figs/{q2_1.9_pdf_uv}.pdf}
+    \includegraphics[width=0.49\textwidth]{figs/{q2_1.9_pdf_dv}.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figs/{q2_1.9_pdf_g}.pdf}
+    \includegraphics[width=0.49\textwidth]{figs/{q2_1.9_pdf_Sea}.pdf}
+    \caption{The fitted PDFs with their total uncertainties at the scale $\mu^2_f=1.9$ GeV$^2$ compared with the distributions from the PROSA 2015 fit.}
+    \label{fig:pdfs19}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.49\textwidth]{figs/gluonpar/q2_10_pdf_g.pdf}
+    \includegraphics[width=0.49\textwidth]{figs/gluonpar/q2_10_pdf_g_ratio.pdf}
+    \caption{(left) The gluon PDF with their total uncertainties at the scale $\mu^2_f=10$ GeV$^2$ obtained using different gluon parametrisations (see Eq.~\ref{eq:gluonpar}). (right) The same PDFs normalised to the distribution obtained using the nominal parametrisation.}
+    \label{fig:gluonpar}
+\end{figure}
 
 \end{document}
 
