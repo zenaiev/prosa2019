@@ -1,0 +1,75 @@
+
+
+Some comments going through the paper in order with trivial and important all mixed in!
+
+Page 1 Near the end of first paragraph the subjects of two of your sentences are 'measurements' in plural so you need 'are' and 'were' for the verbs in these sentences.
+
+>>> Fixed
+
+The inequality about x rang 510^-6 to 10^-4 is the wrong way around
+
+>>> Fixed
+
+'Theory' in section 2 title is misspelt 
+
+>>> Fixed
+
+It seems a bit odd to normalise the ALICE measurements to the LHCb central rapidity cross-section??
+
+>>> There is only one rapidity bin (0<|y|<0.5) in the ALICE measurements, so one can't do differently when using only the shape of rapidity distribution but to normalise to the LHCb measurement. There should be nothing wrong in such normalistaion, because these cross sections are defined in the same way. The only obvious drawback is that one does not benefit from cancellation of experimental uncertainties because ALICE and LHCb systematic uncertainties are assumed uncorrelated (on the other hand, theoretical uncertainties from scale variations in the PDF fit do cancel).
+
+Page 2 second paragraph, 6th line: 'measurement' needs to be 'measurements'
+
+>>> Fixed
+
+Is it right to treat experimental measurements from different beam energies as uncorrelated-- there could be common procedures?
+But it does seem as if the ALICE and LHCb has only ONE number for correlated uncertainty, so I guess you cannot easily estimate this?
+
+>>> This statement in the paper needs a remark. In fact, as explained in the paper, we only use 'normalisation' correlated systematic uncertainties (since only single numbers are reported in ALICE and LHCb papers), and such uncertainties fully cancel when calculating normalised rapidity cross sections for one experiment. They do not cancel only in the ratios ALICE/LHCb. Unfortunately, no information on the correlation of systematic uncertainties of 5 and 7 TeV measurements is provided by ALICE or LHCb, and in this situation the assumption that the uncertainties are uncorrelated seems to be a natural one. However, given that the uncertainties cancel for most of the data points, one does not expect strong sensitivity on this assumption. The following sentence was added: "Because of this treatment of systematic uncertainties, most of the correlated systematic uncertainties cancel in the calculation of the normalised cross sections, in particular a complete cancellation in the ratios of LHCb cross sections takes place."
+
+End of the page, I think It sounds better to say 'The fit is also performed in the VFN scheme' somehow 'Alternatively just doesn't sound right.
+
+>>> Done
+
+Page 3..next to last paragraph you are talking about starting with D,E,F parameters zero as we usually do BUT you haven't actually quoted a form with any E parameter in it so this needs tidying up. 
+
+>>> Sentence changed to: "The parameters in Eqs.(\ref{eq:dv}) are selected by first parametrising each PDF as $xf(x) = Ax^B(1-x)^C(1+Dx+Ex^2)$ with all D, E and F parameters set to zero."
+
+In fact HERAPDF2.0 has Euv as you know and here you are using Duv was that a typo?
+
+>>> Yes, it was a typo, thank you for spotting: fixed now.
+
+Page 4 I admire the effort to assess the effect of different parametrisations, but there are various problems. The first is that right now Fig 4 is referred to before any other figure. If we keep it then it should be in an appendix and referred to as being in an appendix. Maybe this whole study needs to be put in an appendix and you just say that we did such a study in the main text. Secondly the Fig 4 which is currently there is not what it purports to be The right hand side is the same as Fig 2 right-hand-side. I don't think I am seeing the effect of different parametrisatiosn at all!!
+Thirdly, the information at the moment is too detailed. If MMHT won't work it is better not to have it in at all  (because is misspelt in the para about MMHT, by the way). The reference for the 'alternative' gluon param in HERAPDf2.0 has gone missing.
+I think the discussion of ABMP16,HERAPDF(ALT) and BG being similar is worth having AND the comment on ALT being suitale for very low-x. PLUS the comment that CT and HERAPDF (normal) have a turn over which makes them unsuitable. Indeed we considered ALT for very low-x precisely because of this, so these are not separate comments. Anyway my main point is that you need to put the whole LOT in an appendix and shorten the comments on the unsuitability of MMHT.
+
+>>> The discussion was moved into Appendix, and Figure 4 was fixed (sorry about this, I copied wrong plots when doing the last cosmetic update). On the MMHT parametrisation, just one sentence is put: "In this analysis, it was not possible to achieve convergence of the fit using the MMHT2014 parametrisation~\cite{Harland-Lang:2014zoa}, because of no essential sensitivity of the used data sets to the gluon distribution at high $x$." (I think just ignoring the MMHT parametrisation in this study would not be the right thing to do)
+
+Page 5 The discussion on the scale uncertainty variation is not quite clear, when you vary mur and muf indepdenly do you allow mur=1/2 scale at the same time as muf=2* scale, ie are ou using 9 point or 7-point variation? 
+
+>>> We use 7 points, the text was clarified: "The scales $\mu_f$ and $\mu_r$ for heavy quark production are varied independently and simultaneously up and down by a factor of two, excluding variations of the two scales in opposite directions."
+
+In the next sentence when you say simultaneous variation of mur and muf it is also not clear if you mean in the same direction.
+
+>>> Yes, the text was clarified accordingly.
+
+I don't think you need to tell the world about the fit instability when one uses an extra Glog^2 x term as central. This sort of thing happens all the time.
+Just tell them it was one of your variations.
+
+>>> Modified accordingly: "In particular, the shape of the gluon PDF is extended by adding the $+G_g\log^2 x$ term~\cite{Bonvini:2019wxf}. This modification does not result in an improvement in $\chi^2$ and therefore is not considered in the nominal parametrisation."
+
+In the results section, YES it would be nice to show the comparisons of the VFN version to some data-- but the fact that it works is because these processes do not depend much on the low-x gluon and apart from the low-x gluon your PDf is quite similar to HERAPDF2.0??
+
+>>> Currently we are thinking to put these plots on the PROSA webpage and refer to it. Indeed these processes do not depend on the low-x gluon, but there is always a correlation between low-x and high-x PDF because of the sum rule, thus we wanted to check that the changes at low x do not lead to any inconsistency with data which are sensitivie to the high-x gluon.
+
+Table 1--it might be nice to know how much of the correlated piece comes from the LHCb and ALICE data?
+
+>>> I have to think how to provide this information... It is not easy because of normalising ALICE data to LHCb data, the correlated chi2 cannot be splitted anymore. What one could do is to quote the total chi^2 for ALICE+LHCb (for both uncorrelated and correlated uncertainties), would this help? (actually then one could do the same for the HERA data, and the table would consist of just 3 numbers: total chi2 and two partial chi2, one for HERA and one for LHC... but then one can't see anymore that partial chi2 for all different LHCb and ALICE data sets are fine, or at least their uncorrelated chi2 part)
+
+Fit in VFNS--why the specific choice of \mu_c and \mu_b ?? (YES I know you vary it but why this central choice)
+
+>>> It was done in order to have round (and not too low) values for the cuts on minimum p_T of charm and beauty data. The sentence was added: "The specific matching thresholds in Eq.~\ref{eq:thr} are chosen to ensure that a sufficient amount of the LHC charm and beauty data is still included in the fit."
+
+Additional Plots... I don't think we need Fig 3 at all, but if we are going to have Fig 4 in an appendix then let's have the right figure.
+
+>>> Figure 4 fixed (now it is Fig. 3). Figure 3 (now Fig. 4) was provided on request from Maria Vittoria, we might want to drop it later.
