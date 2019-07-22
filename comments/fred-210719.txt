@@ -1,0 +1,121 @@
+============================================
+SEC 1: minor suggestion: ===============
+"the theory of strong interactionS, ..."
+
+>>> Done
+
+============================================
+SEC 3: PDf Parm.
+4th paragraph: ===============
+"The parameters in Eqs.(1) are selected by first fitting
+with all D, E and F parameters ..."
+E and F are used, but not E. Might introduce a generic structure
+to define these: 1+D x E x^2 + F Log + G Log^2
+
+>>> Changed to (the F parameter was tested only for the gluon): 
+"The parameters in Eq.(\ref{eq:dv}) are selected by first parametrising each PDF as $xf(x) = Ax^B(1-x)^C(1+Dx+Ex^2)$ with all D and E parameters set to zero."
+
+============================================
+para after Eq.2 =========
+It would be useful to
+i) see the different gluons from eq.2
+[I guess this will be an updated Fig.4?]
+and
+ii) maybe comment about the fit quality
+[in terms of Chi2??]
+
+>>> Figure 4 was updated, and text extended: 
+... " (despite they provide an improved $\chi^2$, by $22$ and $7$ units when using the HERAPDF2.0 and CT14 parametrisations, respectively)."
+More details can be found in talks (password 'prosa')
+https://indico.desy.de/indico/event/22951/contribution/1/material/slides/0.pdf (page 14)
+https://indico.desy.de/indico/event/23356/contribution/0/material/slides/0.pdf (pages 6-9)
+
+Even though HERAPDF2.0 and CT14 turn over, I'd be curious
+to know what they look like and how well they fit.
+Obviously we can't extrapolate to low x with these, but ...
+
+>>> See figure 4 in the new draft. The comparison of PDFs with nominal parametrisation and "flexible" (negative) gluon with LHC charm data can be found in
+https://indico.desy.de/indico/event/22951/contribution/1/material/slides/0.pdf (page 23-25)
+It does not seem to be possible to attribute the improvement of ~20 units in chi^2 to any data sets, or kinematic region: it looks like it comes from the sum rule, somehow the DIS data want some part of the proton momentum to be negative (just to satisfy the sum rule) in kinematic regions which are not constrained by data, and with too flexible low x gluon there is always such a region.
+
+Also, there has been a lot of work on small x resummation
+as a balm for the low x gluon behavior. However,
+since we are working at NLO here, this really comes in at NNLO
+so it might not be relevant--does this sound right?
+
+>>> Indeed the small x resummation might be very important, but it is not available for this process yet.
+It would need a dedicated study, after some theoretical ingredients will be available.
+The following text was added:
+"The inclusion of small $x$ resummation which was shown to stabilise the perturbative expansion at NNLO and improve the description of HERA data in PDF fits~\cite{Ball:2017otu,Abdolmaleki:2018jln} is left for the future, once all necessary theoretical ingredients will be available."
+
+============================================
+End of sec 3 ========
+Seems this could use a recap here.
+There was a lot of useful info, but it might be worthwhile to
+remind key results for reader.
+
+>>> This section has changed: the description of the study of additional gluon parametrisations was moved into Appendix (as Mandy suggested), and probably this section is easier to read now.
+
+============================================
+Beginning of SEc.4 ===========
+Might be worth stating explicitly the PDF form we'll used here
+in generic form so reader has concrete ref equation for this section.
+
+>>> The text was adjusted accordingly:
+"The parametrisation uncertainty is estimated by extending the functional form of each PDF in Eq.~(\ref{eq:dv}) with additional parameters $D$ and $E$ (see Eq.~\ref{eq:de}), which are added or removed one at a time..."
+
+============================================
+Sec 4. 4th line === minor:
+"es timated"
+
+>>> Fixed
+
+============================================
+Sec 4: Q0 and mu0 ============
+Q0 is referred to at the beginning and mu0 at the end.
+Might want to clarify that q0 is the data cut
+and mu0 is the evolution start.
+Sometime folk use Q0 as the evolution start so ...
+
+>>> I am not quite sure where Q0 is used... We use mu_0 to denote the starting scale, and Q_min to denote the minimum Q^2 cut
+
+TABLE 1: ================
+Scanning the table, it appears 4 experiments stand out and
+generate about half of the excess chi2.
+
+HERA1+2 NCem              (1.42) 68  [Chi2 = 227=68+159 ndp]
+HERA1+2 NCep 920          (1.16) 63
+LHCb 5TeV [1610.02230] dzero nor. in y  (1.71) 25
+LHCb 13TeV [1510.01707] dzero nor. in y (1.85) 51
+
+These 4 yield (68+63+25+51=) 207+ndp over their ndp.
+The HERA data has good chi2/ndp, but the two LHCb results are on
+the high side.
+
+Interestingly,
+LHCb 7TeV [1302.2864] dzero nor. in y
+had a very low chi2/ndp=15/30
+
+Any idea why these two might be way high (5 & 13 TeV), but the
+7 TeV is good? [I don't have any ideas, but I'll think on this ...]
+
+>>> I also do not have any bright ideas... The comparison of charm data and fitted theoretical predictions can be found in:
+https://indico.desy.de/indico/event/22951/contribution/1/material/slides/0.pdf pages 10-13
+There are a few points (at low pT) in 5 and 13 TeV which deviate by about 2 or 3 sigma. But one should remember that no theoretical uncertainties are included in the chi2.
+The 7 TeV charm measurement is just less precise than the ones at 5 and 13 TeV, perhaps therefore it has a better chi2. 
+Also it is worth to keep in mind that the data sets are correlated with each other, and also LHCb and ALICE data sets at 5 and 7 TeV are correlated because of the common bin used for cross section normalisation.
+
+============================================
+Appendix A: ===========
+
+Nice use of the displaced thresholds.
+The threshold shifts are in line with our expectations from ref.36.
+
+Is it worth quoting a Chi2 for the VFNS just for comparison?
+
+>>> There is chi2/ndof = 2114/1714 in the VFNS, while in the FFNS we have chi2/ndof = 2401/1969, so there is a very similar fit quality (one should note, however, that the two fits are done using different sets of data, so they can't be compared as apple with apple).
+The following sentence was added:
+"In this fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS."
+
+============================================
+============================================
