@@ -37,7 +37,7 @@
 
 \begin{titlepage}
 \noindent
-Draft 0.4  \hfill 22 July 2019\\
+Draft 1.0  \hfill 24 July 2019\\
 \\
 DESY AA-BBB %\hfill  2019\\
 \\
@@ -98,11 +98,11 @@ as probability densities for parton to carry $x$ fraction of the nucleon momentu
 scale evolution of the PDFs is calculated in perturbative QCD (pQCD) and presented by the DGLAP equations~\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs,Curci:1980uw,Furmanski:1980cm,Moch:2004pa,Vogt:2004mw}, the 
 $x$-dependence must be constrained using the experimental measurements. The constraining power of experimental data 
 on particular parton distribution is to large extent defined by the acceptance of the experiment. Measurements of 
-neutral current (NC) and charged current (CC) cross sections in deep inelastic scattering (DIS) at HERA probe the $x$-range of $10^{-4}<x<10^{-1}$ and impose most significant constraints on the light quark PDFs and probe the gluon distribution via scaling violations. Additional constraints on flavour separation of the quark sea and on the gluon distribution at low and high $x$ are obtained by using the measurements at fixed target experiments and in proton-(anti)proton collisions. Heavy-flavour production in proton-proton collisions at the LHC is dominated by the gluon-gluon fusion, therefore corresponding measurements probe the gluon distribution directly. The measurements of forward charm~\cite{Aaij:2013mga} and beauty~\cite{Aaij:2013noa} production by the LHCb experiment at the center-of-mass energy $\sqrt{s}$=7 TeV were used for the first time by the PROSA collaboration~\cite{Zenaiev:2015rfa} to improve constraints on the gluon distribution at $5 \times 10^{-6}< x < 10^{-4}$, in the region not covered by any other data to that date. The resulting PDFs were further used to investigate the uncertainties of the prompt neutrino fluxes in the atmosphere~\cite{Garzelli:2016xmx}.       
+neutral current (NC) and charged current (CC) cross sections in deep inelastic scattering (DIS) at HERA probe the $x$-range of $10^{-4}<x<10^{-1}$ and impose most significant constraints on the light quark PDFs and probe the gluon distribution via scaling violations. Additional constraints on flavour separation of the quark sea and on the gluon distribution at low and high $x$ are obtained by using the measurements at fixed target experiments and in proton-(anti)proton collisions. Heavy-flavour production in proton-proton collisions at the LHC is dominated by the gluon-gluon fusion, therefore corresponding measurements probe the gluon distribution directly. The measurements of forward charm~\cite{Aaij:2013mga} and beauty~\cite{Aaij:2013noa} production by the LHCb experiment at the center-of-mass energy $\sqrt{s}=7$ TeV were used for the first time by the PROSA collaboration~\cite{Zenaiev:2015rfa} to improve constraints on the gluon distribution at $5 \times 10^{-6}< x < 10^{-4}$, in the region not covered by any other data to that date. The resulting PDFs were further used to investigate the uncertainties in the predictions of prompt neutrino fluxes in the atmosphere~\cite{Garzelli:2016xmx}.       
 
 Recent improvements in precision of HERA measurements, new experimental data on heavy flavour production at the LHC at 
-different $\sqrt{s}$, together with new developments on the theory and improvements in the phenomenological tools, offer 
-possibilities for stronger constraints of the gluon distribution at low $x$. These improvements in experimental measurements 
+different $\sqrt{s}$, together with new developments in the theory and improvements of the phenomenological tools, offer 
+possibilities for stronger constraints on the gluon distribution at low $x$. These improvements in experimental measurements 
 and the theory are explored in the QCD analysis presented in this paper, which updates the earlier result~\cite{Zenaiev:2015rfa}. The results are used in the predictions for the prompt atmospheric neutrino fluxes. 
 
 
@@ -125,16 +125,17 @@ In the presented QCD analysis, bin-to-bin correlations in the input measurements
 The correlated uncertainties in the ALICE and LHCb measurements reported in original publications~\cite{Aaij:2016jht, Aaij:2013mga, Aaij:2015bpa, Acharya:2019mgn, Acharya:2017jgo, Aaij:2013noa} as single numbers in $p_T$ and $y$ bins 
 are treated as fully correlated, and the uncorrelated uncertainties are obtained by subtracting the correlated ones from the 
 total uncertainties, in quadrature. The systematic uncertainties, reported as error intervals, see e.g. Table~(2) of ~\cite{Aaij:2016jht}, are assumed uncorrelated, since no details about their size in individual $p_T$ and $y$ bins are provided. 
-Because of this treatment of systematic uncertainties, most of the correlated systematic uncertainties cancel in the calculation of the normalised cross sections, in particular a complete cancellation in the ratios of LHCb cross sections takes place.
+Because of this treatment of systematics, most of the correlated systematic uncertainties cancel in the calculation of the normalised cross sections. In particular, a complete cancellation in the ratios of LHCb cross sections takes place.
 For different final state measurements within one experiment, the tracking and luminosity uncertainties are treated as correlated. 
 Furthermore, all experimental uncertainties are treated as uncorrelated among measurements at different center-of-mass energies. 
 % and no further assumptions on the correlation of systematic uncertainties for different measurements are needed.
 %Uncertainties in the branching ratios for the same channel are treated as correlated between different measurements. 
 The uncorrelated uncertainties in the normalized cross sections $\frac{{\rm d}\sigma}{{\rm d}y_0}$ are propagated as correlated uncertainties to the respective complementary rapidity bins.
+It is worthwhile to note, that the details of the experimental uncertainties and their correlations in each individual kinematic range is of great importance for the correct interpretation of the data.
 
 In the presented QCD analysis, the scale evolution of partons is calculated through DGLAP equations at NLO, as implemented in 
 the QCDNUM programme~\cite{openqcdrad}.  
-The inclusion of small $x$ resummation which was shown to stabilise the perturbative expansion at next-to-next-to-leading order (NNLO) and improve the description of HERA data in PDF fits~\cite{Ball:2017otu,Abdolmaleki:2018jln} is left for the future, once all necessary theoretical ingredients will be available.
+The inclusion of small $x$ resummation which was shown to stabilise the perturbative expansion at next-to-next-to-leading order (NNLO) and improve the description of HERA data in PDF fits~\cite{Ball:2017otu,Abdolmaleki:2018jln} is left for future analyses, once all necessary theoretical ingredients become available.
 
 The theoretical FFNS predictions for the HERA data are obtained using OPENQCDRAD~\cite{openqcdrad} code in the 
 fixed-flavour-number scheme (FFNS) with the three active flavours in the proton, following the Ref.~\cite{H1:2018flt}. 
@@ -181,7 +182,7 @@ $f_{s}=0.4$ as in the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha}.
 Additional constraints $B_{\overline{\mathrm{U}}} = B_{\overline{\mathrm{D}}}$ and $A_{\overline{\mathrm{U}}} = A_{\overline{\mathrm{D}}}(1 - f_{s})$ are imposed to ensure the same normalisation for the $x\overline{u}$ and $x\overline{d}$ distributions as $x \to 0$.
 The term $F_g\log x$ was proposed in~\cite{Bonvini:2019wxf} to provide a more flexible functional form at low $x$.
 
-For all measured data, the predicted and measured cross sections together with their corresponding uncertainties are used to build a global $\chi^2$, minimized to determine the initial PDF
+The predicted and measured cross sections together with their corresponding uncertainties are used to build a global $\chi^2$, minimized to determine the initial PDF
 parameters. The $\chi^2$ definition follows that of Eq.~(32) in Ref.~\cite{Abramowicz:2015mha}. In the minimisation, performed 
 using the MINUIT package~\cite{James:1975dr}, the experimental uncertainties in the heavy-quark normalised cross 
 sections are treated as additive, and the treatment of the experimental uncertainties for the HERA DIS data follows 
@@ -195,7 +196,7 @@ xf(x) = Ax^B(1-x)^C(1+Dx+Ex^2)
 with all D and E parameters set to zero. The other 
 parameters are then included in the fit one at a time. The improvement in $\chi^2$ of the fits is monitored and the 
 procedure is stopped when no further improvement is observed. The inclusion of the $F_{g}$ parameter does not lead to sizable change in $\chi^2$, in particular, its fitted value is consistent with $0$ within uncertainty, however the variation of $F_{g}$ significantly affects the fit uncertainties.
-To ensure that the gluon PDF at low $x$ is not overconstrained in the fit, different functional forms in the parametrisation were tested, as used in the ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, HERAPDF2.0~\cite{Abramowicz:2015mha}, MMHT2014~\cite{Harland-Lang:2014zoa} and Bonvini-Giuli (BG)~\cite{Bonvini:2019wxf} PDF fits. This study is described in Appendix (Section~\ref{sec:gluonpar}).
+To ensure that the gluon PDF at low $x$ is not overconstrained in the fit, different functional forms in the parametrisation were tested, as used in the ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, HERAPDF2.0~\cite{Abramowicz:2015mha}, MMHT2014~\cite{Harland-Lang:2014zoa} and Bonvini-Giuli (BG)~\cite{Bonvini:2019wxf} PDF fits. The details of this study are given in Appendix (Section~\ref{sec:gluonpar}).
 
 
 \section{PDF uncertainties}
@@ -234,37 +235,37 @@ The central values and the uncertainties of the fitted parameters are given in T
 \begin{tabular}{ll}
     Dataset & $\chi^2/\textrm{ndp}$ \\
     \hline
-    HERA1+2 CCep & 62 / 39  \\ 
-    HERA1+2 CCem & 49 / 42  \\ 
-    HERA1+2 NCem & 227 / 159  \\ 
-    HERA1+2 NCep 820 & 68 / 70  \\ 
-    HERA1+2 NCep 920 & 440 / 377  \\ 
-    HERA1+2 NCep 460 & 223 / 204  \\ 
-    HERA1+2 NCep 575 & 223 / 254  \\ 
-    HERA c & 49 / 52  \\ 
-    HERA b & 18 / 27  \\ 
-    LHCb 7TeV [1302.2864] dzero nor. in y & 15 / 30  \\ 
-    LHCb 7TeV [1302.2864] dch nor. in y & 19 / 29  \\ 
-    LHCb 7TeV [1302.2864] ds nor. in y & 14 / 20  \\ 
-    LHCb 7TeV [1302.2864] dstar nor. in y & 16 / 22  \\ 
-    LHCb 7TeV Bzero pT-y cross section & 52 / 76  \\ 
-    LHCb 7TeV Bch pT-y cross section & 129 / 108  \\ 
-    LHCb 7TeV Bs pT-y cross section & 37 / 60  \\ 
-    LHCb 5TeV [1610.02230] dzero nor. in y & 60 / 35  \\ 
-    LHCb 5TeV [1610.02230] dch nor. in y & 25 / 35  \\ 
-    LHCb 5TeV [1610.02230] ds nor. in y & 30 / 29  \\ 
-    LHCb 5TeV [1610.02230] dstar nor. in y & 35 / 30  \\ 
-    LHCb 13TeV [1510.01707] dzero nor. in y & 111 / 60  \\ 
-    LHCb 13TeV [1510.01707] dch nor. in y & 72 / 64  \\ 
-    LHCb 13TeV [1510.01707] ds nor. in y & 69 / 55  \\ 
-    LHCb 13TeV [1510.01707] dstar nor. in y & 82 / 54  \\ 
-    ALICE 7TeV [1702.00766] dzero nor. in y & 5.1 / 8  \\ 
-    ALICE 7TeV [1702.00766] dch nor. in y & 0.75 / 7  \\ 
-    ALICE 7TeV [1702.00766] dstar nor. in y & 2.3 / 6  \\ 
-    ALICE 5TeV [1901.07979] dzero nor. in y & 6.3 / 10  \\ 
-    ALICE 5TeV [1901.07979] dch nor. in y & 5.8 / 9  \\ 
-    ALICE 5TeV [1901.07979] ds nor. in y & 2.5 / 4  \\ 
-    ALICE 5TeV [1901.07979] dstar nor. in y & 1.7 / 9  \\ 
+    HERA CC $e^{+}p$ & 62 / 39  \\ 
+    HERA CC $e^{-}p$ & 49 / 42  \\ 
+    HERA NC $e^{-}p$ & 227 / 159  \\ 
+    HERA NC $e^{+}p$ 820 GeV & 68 / 70  \\ 
+    HERA NC $e^{+}p$ 920 GeV & 440 / 377  \\ 
+    HERA NC $e^{+}p$ 460 GeV & 223 / 204  \\ 
+    HERA NC $e^{+}p$ 575 GeV & 223 / 254  \\ 
+    HERA NC charm & 49 / 52  \\ 
+    HERA NC beauty & 18 / 27  \\ 
+    LHCb 7 TeV $B^0$ & 52 / 76  \\ 
+    LHCb 7 TeV $B^{+}$ & 129 / 108  \\ 
+    LHCb 7 TeV $B^{0}_s$ & 37 / 60  \\ 
+    LHCb 7 TeV $D^0$ & 15 / 30  \\ 
+    LHCb 7 TeV $D^{+}$ & 19 / 29  \\ 
+    LHCb 7 TeV $D^{+}_{s}$ & 14 / 20  \\ 
+    LHCb 7 TeV $D^{*+}$ & 16 / 22  \\ 
+    LHCb 5 TeV $D^0$ & 60 / 35  \\ 
+    LHCb 5 TeV $D^{+}$ & 25 / 35  \\ 
+    LHCb 5 TeV $D^{+}_{s}$ & 30 / 29  \\ 
+    LHCb 5 TeV $D^{*+}$ & 35 / 30  \\ 
+    LHCb 13 TeV $D^0$ & 111 / 60  \\ 
+    LHCb 13 TeV $D^{+}$ & 72 / 64  \\ 
+    LHCb 13 TeV $D^{+}_{s}$ & 69 / 55  \\ 
+    LHCb 13 TeV $D^{*+}$ & 82 / 54  \\ 
+    ALICE 7 TeV $D^0$ & 5.1 / 8  \\ 
+    ALICE 7 TeV $D^{+}$ & 0.75 / 7  \\ 
+    ALICE 7 TeV $D^{*+}$ & 2.3 / 6  \\ 
+    ALICE 5 TeV $D^0$ & 6.3 / 10  \\ 
+    ALICE 5 TeV $D^{+}$ & 5.8 / 9  \\ 
+    ALICE 5 TeV $D^{+}_{s}$ & 2.5 / 4  \\ 
+    ALICE 5 TeV $D^{*+}$ & 1.7 / 9  \\ 
     \hline
     Correlated $\chi^2$  & 282  \\ 
     Log penalty $\chi^2$  &  -32  \\ 
@@ -423,6 +424,7 @@ The choice of the matching thresholds is arbitrary and amounts to a renormalisat
 In this fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS.
 The resulting PDFs are available in the LHAPDF format at [\dots]. No PDF uncertainties are provided with this set.
 
+\if 0
 \section{Additional plots}
 \label{sec:extraplots}
 
@@ -439,7 +441,7 @@ The fitted PDFs with their total uncertainties at the starting scale of PDF evol
     \caption{The fitted PDFs with their total uncertainties at the scale $\mu^2_f=1.9$ GeV$^2$ compared with the distributions from the PROSA 2015 fit.}
     \label{fig:pdfs19}
 \end{figure}
-
+\fi
 
 \end{document}
 
