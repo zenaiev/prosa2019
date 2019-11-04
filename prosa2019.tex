@@ -356,8 +356,32 @@ variations in predictions for heavy-quark hadroproduction. Reduction of these un
     \label{fig:pdfratios}
 \end{figure}
 
-The resulting PDFs are available in the LHAPDF format at [\dots] in both FFNS and VFNS.
-The performance of the new PDFs presented here was tested by computing predictions for the inclusive and multi-jet production in DIS~\cite{Chekanov:2002be,Chekanov:2006xr,Abramowicz:2010cka,Aktas:2007aa,Aaron:2010ac} and jet~\cite{Chatrchyan:2012bja} and top quark-antiquark production~\cite{Sirunyan:2017azo,Sirunyan:2019zvx} in proton-proton collisions. The VFNS variant of the presented PDFs is used. The results are found similar to those using HERAPDF2.0 PDF.%
+The resulting PDFs are available in the LHAPDF format at [\dots].
+
+\subsection{Fit in VFNS}
+\label{sec:vfns}
+
+The fit in the VFNS is performed using the APFEL library~\cite{Bertone:2013vaa} interfaced in xFitter.
+The theoretical predictions for the HERA data are computed using the FONLL-B scheme~\cite{Forte:2010ta} with the pole charm and beauty quark masses set to $m_c^{\textrm{pole}} = 1.4$ GeV and $m_c^{\textrm{pole}} = 4.5$ GeV respectively.
+However, no VFNS calculation for heavy-quark hadroproduction is interfaced to public tools and can be used for PDF fitting.
+To keep using the MNR calculations with the VFNS, we exploit the feature of the APFEL library to choose arbitrary heavy-quark matching thresholds~\cite{Bertone:2017ehk}. These thresholds are set to values:
+\begin{equation}
+\begin{aligned}
+\mu_c &= 4.5m_c^{\textrm{pole}} = 6.3~\textrm{GeV},\\
+\mu_b &= 4.5m_b^{\textrm{pole}} =  20.25~\textrm{GeV}.
+\label{eq:thr}
+\end{aligned}
+\end{equation}
+We imposed kinematic cuts $p_T < 5$ GeV and $p_T < 16$ GeV on the LHC charm and beauty data, respectively, to ensure that we are working with not more than 3 (4) light flavours when calculating predictions for charm (beauty) data.
+The strong coupling strength is set to $\alpha_s^{n_f = 5}(M_Z) = 0.118$~\cite{Tanabashi:2018oca}, while all other settings are the same as in the FFNS fit.
+The specific matching thresholds in Eq.~(\ref{eq:thr}) are chosen to ensure that a sufficient amount of the LHC charm and beauty data is still included in the fit.
+The choice of the matching thresholds is arbitrary and amounts to a renormalisation scheme choice~\cite{Bertone:2017ehk}, therefore we have verified that the fit results are stable under variations within $3.1 \le \mu_Q/m_Q^{\textrm{pole}} \le 6$, with the $p_T$ cuts on the charm and beauty LHC data modified accordingly.
+
+In this fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS.
+The resulting PDFs are available in the LHAPDF format at [\dots]. No PDF uncertainties are provided with this set.
+
+The performance of the new PDFs presented here was tested by computing predictions for the inclusive and multi-jet production in DIS~\cite{Chekanov:2002be,Chekanov:2006xr,Abramowicz:2010cka,Aktas:2007aa,Aaron:2010ac} 
+and jet~\cite{Chatrchyan:2012bja} and top quark-antiquark production~\cite{Sirunyan:2017azo,Sirunyan:2019zvx} in proton-proton collisions. The  variant of the presented PDFs is used. The results are found similar to those using HERAPDF2.0 PDF.%
 \footnote{The resulting predictions compared to the measurements by H1, ZEUS and CMS experiments will be put on the PROSA webpage for reference.}
 
 \newpage
@@ -434,7 +458,7 @@ CR and the target nucleon of the air, obtained using the PROSA19 PDF set, is com
 \begin{figure}
 \centering
     \includegraphics[width=0.62\textwidth]{figs/fluxcompa_prosa19abmmicicecube_verynew2_py8.pdf}
-  \caption{\label{fig3prompt} Predictions for prompt neutrino fluxes from this paper as compared to other predictions by our group. Predictions obtained with the PROSA PDF fit of Ref.~\cite{Zenaiev:2015rfa}, using the same $\mu_R$ = $\mu_F$ scale, but a slightly different charm mass value ($m_c$ = 1.4 GeV) are shown by dotted (pink) lines; the predictions of Ref.~\cite{Garzelli:2015psa}, using the ABM11 PDF fit~\cite{Alekhin:2012ig}, are shown by double-dotted-dashed (blue) lines. Finally the predictions using the VFNS version of the PDF fit described in this paper (see Appendix B), in association with a GM-VFNS calculation of charm hadroproduction~\cite{Benzke:2017yjn}, are also reported and compared to those of Ref.~\cite{Benzke:2017yjn} itself, that made use of the CT14nlo PDF fit~\cite{Dulat:2015mca}. 
+  \caption{\label{fig3prompt} Predictions for prompt neutrino fluxes from this paper as compared to other predictions by our group. Predictions obtained with the PROSA PDF fit of Ref.~\cite{Zenaiev:2015rfa}, using the same $\mu_R$ = $\mu_F$ scale, but a slightly different charm mass value ($m_c$ = 1.4 GeV) are shown by dotted (pink) lines; the predictions of Ref.~\cite{Garzelli:2015psa}, using the ABM11 PDF fit~\cite{Alekhin:2012ig}, are shown by double-dotted-dashed (blue) lines. Finally the predictions using the VFNS version of the PDF fit described in this paper (see Section~\ref{sec:vfns}), in association with a GM-VFNS calculation of charm hadroproduction~\cite{Benzke:2017yjn}, are also reported and compared to those of Ref.~\cite{Benzke:2017yjn} itself, that made use of the CT14nlo PDF fit~\cite{Dulat:2015mca}. 
 %our older ones~\, using as a basis the same all-nucleon flux (Broken-Power-Law CR) and the same $\mu_R$=$\mu_F$ choice, although slightly different charm mass values. 
 The experimental upper limit on prompt ($\nu_\mu$ + $\bar{\nu}_\mu$) flux, extracted from IceCube in the analysis of Ref.~\cite{Aartsen:2016xlq} is also reported.}
 \end{figure}
@@ -521,28 +545,6 @@ The gluon distribution obtained in the fit using different parametrisations, see
     \caption{(left) The gluon PDF with their total uncertainties at the scale $\mu^2_f=10$ GeV$^2$ obtained using different gluon parametrisations, see Eq.~(\ref{eq:gluonpar}). (right) The same PDFs normalised to the distribution obtained using the nominal parametrisation.}
     \label{fig:gluonpar}
 \end{figure}
-
-\section{Fit in VFNS}
-\label{sec:vfns}
-
-The fit in the VFNS is performed using the APFEL library~\cite{Bertone:2013vaa} interfaced in xFitter.
-The theoretical predictions for the HERA data are computed using the FONLL-B scheme~\cite{Forte:2010ta} with the pole charm and beauty quark masses set to $m_c^{\textrm{pole}} = 1.4$ GeV and $m_c^{\textrm{pole}} = 4.5$ GeV respectively.
-However, no VFNS calculation for heavy-quark hadroproduction is interfaced to public tools and can be used for PDF fitting.
-To keep using the MNR calculations with the VFNS, we exploit the feature of the APFEL library to choose arbitrary heavy-quark matching thresholds~\cite{Bertone:2017ehk}. These thresholds are set to values:
-\begin{equation}
-\begin{aligned}
-\mu_c &= 4.5m_c^{\textrm{pole}} = 6.3~\textrm{GeV},\\
-\mu_b &= 4.5m_b^{\textrm{pole}} =  20.25~\textrm{GeV}.
-\label{eq:thr}
-\end{aligned}
-\end{equation}
-We imposed kinematic cuts $p_T < 5$ GeV and $p_T < 16$ GeV on the LHC charm and beauty data, respectively, to ensure that we are working with not more than 3 (4) light flavours when calculating predictions for charm (beauty) data.
-The strong coupling strength is set to $\alpha_s^{n_f = 5}(M_Z) = 0.118$~\cite{Tanabashi:2018oca}, while all other settings are the same as in the FFNS fit.
-The specific matching thresholds in Eq.~(\ref{eq:thr}) are chosen to ensure that a sufficient amount of the LHC charm and beauty data is still included in the fit.
-The choice of the matching thresholds is arbitrary and amounts to a renormalisation scheme choice~\cite{Bertone:2017ehk}, therefore we have verified that the fit results are stable under variations within $3.1 \le \mu_Q/m_Q^{\textrm{pole}} \le 6$, with the $p_T$ cuts on the charm and beauty LHC data modified accordingly.
-
-In this fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS.
-The resulting PDFs are available in the LHAPDF format at [\dots]. No PDF uncertainties are provided with this set.
 
 \end{document}
 
