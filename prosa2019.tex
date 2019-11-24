@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 %\usepackage{jheppub} 
+
 \usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{a4}
@@ -63,8 +64,7 @@ Improved constraints on parton distributions using LHCb, ALICE and HERA heavy-fl
 \end{center}
  %\input{authors.tex}  
 \noindent
-O.~Zenaiev$^{1a}$, \mbox{M.V.~Garzelli}$^{2}$, K.~Lipka$^{3}$, \mbox{S.-O.~Moch}$^{1}$, A.~Cooper-Sarkar$^{4}$, F.~Olness$^{5}$, A.~Geiser$^{3}$, M.~Guzzi (tbc)$^{6}$, P.~Nadolsky (tbc)$^{5}$
-and G.~Sigl (tbc)$^{1}$\\
+O.~Zenaiev$^{1a}$, \mbox{M.V.~Garzelli}$^{2}$, K.~Lipka$^{3}$, \mbox{S.-O.~Moch}$^{1}$, A.~Cooper-Sarkar$^{4}$, F.~Olness$^{5}$, A.~Geiser$^{3}$, G.~Sigl (tbc)$^{1}$\\
 
 
 \noindent
@@ -77,7 +77,6 @@ and G.~Sigl (tbc)$^{1}$\\
 		$^{3}${DESY, Hamburg}\\
 		$^{4}$University of Oxford\\
 		$^{5}$Southern Methodist University\\
-		$^{6}$Kennesaw State University\\
 		$^{a}$now at CERN\\
 	}
 }
@@ -222,10 +221,13 @@ the prescription given in Ref.~\cite{Abramowicz:2015mha}.
 %The parameters in Eq.~(\ref{eq:dv}) are selected by first setting all $D$ and $E$ parameters to zero. 
 The parameters in Eq.~(\ref{eq:dv}) are selected by first parametrising each PDF as
 \begin{equation}
-xf(x) = Ax^B(1-x)^C(1+Dx+Ex^2)
+\begin{split}
+xf(x) &= Ax^B(1-x)^C(1+Dx+Ex^2+F {\log x}), ~~~f=g\\
+xf(x) &= Ax^B(1-x)^C(1+Dx+Ex^2), ~~~f=u_\mathrm{v},d_\mathrm{v},\overline{\mathrm{U}},\overline{\mathrm{D}}
+\end{split}
 \label{eq:de}
 \end{equation}
-and setting all $D$ and $E$ parameters to zero.
+and setting all $D$, $E$ and F parameters to zero.
 Additional parameters in each resulting PDFs are included in the fit one at a time. 
 The improvement in $\chi^2$ of the fits is monitored and the procedure is stopped when no further improvement is observed. The inclusion of the $F_{g}$ parameter does not lead to significant change in $\chi^2$, in particular, its fitted value is consistent with $0$ within uncertainty, however the variation of $F_{g}$ significantly affects the fit uncertainties.
 
@@ -433,24 +435,23 @@ originating from the semileptonic decays of heavy-flavoured hadrons produced in 
 cosmic neutrinos, which are supposed to be produced in the vicinity of far astrophysical sources and in the Galactic Plane~\cite{Gaisser:2016uoy}.  
 Such searches are conducted at Very Large Volume Neutrino Telescopes such as ANTARES~\cite{Collaboration:2011nsa}, IceCube~\cite{Gaisser:2014foa} and KM3NeT~\cite{Adrian-Martinez:2016fdl}, which register and analyse the features of the track and cascade events induced by the charged-current and neutral-current weak interactions of the impinging neutrinos with the water/ice nuclei. To date, no direct measurement of the prompt atmospheric neutrino flux is available. Therefore, the most precise theoretical predictions for these fluxes are needed for the reliable interpretation of the experimental data in order to disentangle the cosmic neutrino component from the atmospheric background~\cite{Mascaretti:2019uqn}.
 
-In this paper, the predictions for the prompt atmospheric neutrino fluxes are calculated, in general following the method detailed in Ref.~\cite{Garzelli:2016xmx}. It is assumed, that $pA$ and $AA$ interactions leading to charm production can be described in terms of $pp$ interactions (superposition model) in pQCD. In the present calculation, the proton structure is described by the new PROSA fit, referred to as PROSA 2019.
+In this paper, the predictions for the prompt atmospheric neutrino fluxes are calculated, in general following the method detailed in Ref.~\cite{Garzelli:2016xmx}. It is assumed, that $pA$ and $AA$ interactions leading to charm production can be described in terms of $pp$ interactions (superposition model) in pQCD. For the proton structure description, the PROSA 2019 is used among other PDFs.
 Production and decay of the $D^\pm$, $D^0$, $\bar{D}^0$, $D_s^\pm$, $\Lambda_c^\pm$ in the atmosphere is considered dominant, 
-since the contribution of other charmed hadrons, as well as b-flavoured hadrons, amounts to 5-15\% of the dominant one~\cite{Bhattacharya:2016jce}. In the computation of charmed-hadron production cross sections, the renormalisation and factorisation scales are chosen as $\mu_R$ = $\mu_F$ = $\mu_0$ = $\sqrt{p_T^2 + 4 m_c^2}$, consistent with the scale choice adopted in the theory predictions of $D$- and $B$-meson production at LHCb and ALICE used in the PDF fit. Note that this scale choice differs from the one of Ref.~\cite{Garzelli:2016xmx}, where $\mu_R$ = $\mu_F$ = $\sqrt{p_T^2 + m_c^2}$ was used, consistent with~\cite{Zenaiev:2015rfa}. While the difference between the two scale choices reduces with increasing $p_T$, at low $p_T$, the present scale choice is motivated by faster convergence of the perturbative series to NNLO for the total $pp$~$\rightarrow$~$c\bar{c} + X$ cross section at the LHC energies, as reported in Ref.~\cite{Garzelli:2015psa}. 
+since the contribution of other charmed hadrons, as well as b-flavoured hadrons, amounts to 5-15\% of the dominant one~\cite{Bhattacharya:2016jce}. In the computation of charmed-hadron production cross sections, the renormalisation and factorisation scales are chosen as $\mu_R$ = $\mu_F$ = $\mu_0$ = $\sqrt{p_T^2 + 4 m_c^2}$, consistent with the scale choice adopted in the theory predictions of $D$- and $B$-meson production at LHCb and ALICE used in the PDF fit. Note that this scale choice differs from the one of Ref.~\cite{Garzelli:2016xmx}, where $\mu_R$ = $\mu_F$ = $\sqrt{p_T^2 + m_c^2}$ was used, consistent with~\cite{Zenaiev:2015rfa}. While the difference between the two scale choices reduces with increasing $p_T$, at low $p_T$ the present scale choice is motivated by faster convergence of the perturbative series to NNLO for the total $pp$~$\rightarrow$~$c\bar{c} + X$ cross section at the LHC energies, as reported in Ref.~\cite{Garzelli:2015psa}. 
 
 In the present work, the central value of the pole mass of the charm quark, $m_c^{pole}$ = 1.43 GeV is used, corresponding to $m_c(m_c) = 1.23$ GeV in the PDF fit (see Table 2), as obtained using 1\nobreakdash-loop conversion. It is worthwhile to note that this value is somewhat larger then the one\footnote{In Ref.~\cite{Garzelli:2016xmx}, the $m_c$=1.4 GeV was used instead of the $m_c$=1.25 GeV obtained in the PDF fit of Ref.~\cite{Zenaiev:2015rfa}.} used in Ref.~\cite{Garzelli:2016xmx}. The uncertainty due to the choice of the charm quark mass is evaluated by varying the pole mass by~$\pm$~0.15~GeV around the central value.
 
-The PDF uncertainties are evaluated using the 40 PROSA 2019 uncertainty eigenvectors, accounting for the contributions due to the fit, model, and the parametrisation assumptions. These contributions are then summed up in quadrature. 
+The PDF uncertainties are evaluated using the respective uncertainty eigenvectors, provided. 
 The uncertainty related to the choice of the scales is evaluated considering the envelope of the resulting cross section for the assumptions $\mu_R$, $\mu_F$ = \{(1,~1), (0.5,~0.5), (2,~2), (1,~2), (2, 1), (1, 0.5), (0.5, 1)\} ($\mu_0$, $\mu_0$) in the calculation.
   
-The predictions for the prompt ($\nu_\mu$ + $\bar{\nu}_\mu$) fluxes are presented in Fig.~\ref{fig1prompt}. Those are obtained by using different hypotheses for the primary CR all-nucleon flux~\cite{Gaisser:2011cc,Gaisser:2013bla}, which are derived from the measured CR all-particle spectrum, under specific assumptions for the CR composition. The QCD uncertainties in the resulting prompt ($\nu_\mu$ + $\bar{\nu}_\mu$) fluxes encompass the uncertainties in the charm quark mass, PDF and those related to the scale choice, with the latter being the dominant uncertainty. As expected, the charm quark mass uncertainty decreases with energy: at small $E_{\nu,\,lab}$ it dominates over the PDF uncertainty, whereas at $E_{\nu,\,lab} \sim 10^7$~-~$10^8$~GeV, both uncertainty contributions become similar. 
-At high $E_{\nu,\,lab}$, the PDF uncertainties are reduced with respect to those of Ref.~\cite{Garzelli:2016xmx}, due to 
-inclusion of more data sensitive to the low $x$ region in the presented PDF fit. The different contributions of the PDF uncertainty are shown in Fig.~\ref{fig2prompt}. All these contributions increase with increasing $E_{\nu,\,lab}$, which corresponds to the decreasing $x$ of the target parton, probed. 
+The predictions for the prompt ($\nu_\mu$ + $\bar{\nu}_\mu$) fluxes using PROSA 2019 PDFs are presented in Fig.~\ref{fig1prompt}. Those are obtained by using different hypotheses for the primary CR all-nucleon flux~\cite{Gaisser:2011cc,Gaisser:2013bla}, which are derived from the measured CR all-particle spectrum, under specific assumptions for the CR composition. The QCD uncertainties in the resulting prompt ($\nu_\mu$ + $\bar{\nu}_\mu$) fluxes encompass the uncertainties in the charm quark mass, PDF and those related to the scale choice, with the latter being the dominant uncertainty. As expected, the charm quark mass uncertainty decreases with energy: at small $E_{\nu,\,lab}$ it dominates over the PDF uncertainty, whereas at $E_{\nu,\,lab} \sim 10^7$~-~$10^8$~GeV, both uncertainty contributions become similar. 
+At high $E_{\nu,\,lab}$, the PDF uncertainties are reduced with respect to those of Ref.~\cite{Garzelli:2016xmx}. The different contributions of the PROSA 2019 PDF uncertainty in the flux prediction are shown in Fig.~\ref{fig2prompt}. All the uncertainites increase with increasing $E_{\nu,\,lab}$, which corresponds to the decreasing $x$ of the target parton, probed. 
 
 It is worthwhile to note, that the PDF uncertainties for $E_{\nu,\,lab}$ = $10^6$ - $10^8$ GeV are calculated, assuming the PDFs can
 be extrapolated to $x$-values lower than the kinematic reach of the data used in the PDF fit, $x \approx 10^{-6}$.
-To date, there are no further measurements probing the $x$-range lower than $10^{-6}$ which would correspond to the highest neutrino energies, which can be accessed~\cite{Goncalves:2017lvq}. However, the result based on PROSA 2019 PDFs reaching the lower $x$ values, remains consistent with the one based on PROSA 2015 PDF set. This fact can be considered as a consistency test of the extrapolation procedure, assuming no New Physics contribution in the probed $x$-range. Furthermore, at the neutrino energies of $E_{\nu,\,lab}~\gtrsim~10^5$ GeV, the assumption on CR composition becomes very important (see Fig.~\ref{fig1prompt}), having an impact on both the shape and the normalisation of the prompt atmospheric neutrino flux.  
+To date, there are no further measurements probing the $x$-range lower than $10^{-6}$ which would correspond to the highest neutrino energies, which can be accessed~\cite{Goncalves:2017lvq}. The agreement of the results based on PROSA 2019 and PROSA 2015 PDF sets can be considered as a consistency test of the extrapolation procedure, assuming no New Physics contribution in the probed $x$-range. Furthermore, at the neutrino energies of $E_{\nu,\,lab}~\gtrsim~10^5$ GeV, the assumption on CR composition becomes very important (see Fig.~\ref{fig1prompt}), having an impact on both the shape and the normalisation of the prompt atmospheric neutrino flux.  
 
-In Fig.~\ref{fig3prompt}, the predictions for prompt atmospheric neutrino fluxes are shown. The predictions using FFNS PROSA 2019, PROSA 2015 and ABM11 PDFs with corresponding $\alpha_S(M_Z)$, have been obtained using as a basis matrix-elements for $c\bar{c}$ hadroproduction at NLO in FFNS ($N_f$=3), matched, according to the Powheg formalism~\cite{Nason:2004rx, Frixione:2007nw}, to the {\texttt{PYTHIA8}} Parton Shower and Hadronisation algorithms~\cite{Sjostrand:2014zea}. The predictions using PROSA 2019 PDF at high energies are somewhat lower than those using PROSA 2015 and ABM11 PDFs, due to a somewhat suppressed gluon at low $x$. 
+In Fig.~\ref{fig3prompt}, the predictions for prompt atmospheric neutrino fluxes using different description of the proton structure, are shown. The predictions using FFNS PROSA 2019, PROSA 2015 and ABM11 PDFs with corresponding $\alpha_S(M_Z)$, have been obtained using as a basis matrix-elements for $c\bar{c}$ hadroproduction at NLO in FFNS ($N_f$=3), matched, according to the Powheg formalism~\cite{Nason:2004rx, Frixione:2007nw}, to the {\texttt{PYTHIA8}} Parton Shower and Hadronisation algorithms~\cite{Sjostrand:2014zea}. The predictions using PROSA 2019 PDF at high energies are somewhat lower than those using PROSA 2015 and ABM11 PDFs, due to a somewhat suppressed gluon at low $x$. 
 In the same Figure, the predictions obtained in the generalised-mass VFNS framework of Ref.~\cite{Benzke:2017yjn}, using as input 
 VFNS PDFs (CT14nlo and the PROSA 2019 VFNS) are shown. The NLO QCD corrections are included in the partonic cross section, whereas the transition from partons to hadrons is described by fragmentation functions evolving with the factorisation scale~\cite{Kneesch:2007ey}, 
 a procedure which resums logarithms of $p_T/m_c$ at next-to-leading-logarithmic accuracy. The central predictions using the GM-VFNS are 
@@ -460,7 +461,7 @@ functions on the other hand). Also, a different factorisation scale is used in t
 from the northern hemisphere is also shown and is well described by the predictions. 
 
 
-In Fig.~\ref{fig4prompt} the presented flux prediction is compared to those obtained by other groups. In general, all the flux predictions are consistent within the uncertainties. The result of Ref~\cite{Gondolo:1995fq} shows largest differences with the presented result 
+In Fig.~\ref{fig4prompt} the presented flux prediction using PROSA 2019 PDF is compared to those obtained by other groups and is consistent with those, within uncertainties. The result of Ref~\cite{Gondolo:1995fq} shows largest differences with the presented result 
 due to using the charm cross section calculation at LO only. The ERS dipole model prediction~\cite{Enberg:2008te}, that is mostly used by the experimental collaborations in their data analysis, is also consistent with the prediction of this paper, within uncertainties. The uncertainties in the ERS prediction are smaller compared to the QCD-based prediction, however the way of the uncertainty estimate in both calculations can not be directly compared. Indeed the dipole approach is expected to effectively resum logarithmic contributions of the form $\alpha_S\mathrm{ln}(1/x)$ in the PDF evolution, a property which could lead to a reduction of the PDF uncertainties associated to the target parton at low $x$, whereas the resummation of these logarithms is not included in the DGLAP evolution.
 The uncertainties associated to the projectile parton distributions in Ref~\cite{Enberg:2008te} were estimated by comparing 
 two different central PDF sets, without considering the PDF uncertainty associated to each of those. Furthermore, the 
@@ -523,11 +524,7 @@ CR and the target nucleon of the air, obtained using the PROSA 2019 PDF set, is 
 \section{Summary}
 \label{sec:summary}
 
-In this paper, the new improved constraints on the parton distributions are presented, as obtained in a QCD analysis at NLO using the DIS and $pp$ collision data. In particular the recent measurements of the LHCb and ALICE experiment of hadroproduction of charm and beauty-flavoured hadrons in the forward kinematic range provide additional sensitivity to the gluon distribution.
-Using as a basis different PDF parametrisations, the sensitivity of the results of the fit to the gluon parametrisation used as an input is shown, which is particularly interesting for low $x$'s.  
-%at low $x>10^{-6}$.
-The PDFs are extracted in FFNS and VFNS and are used to obtain improved predictions for the prompt atmospheric neutrino fluxes. 
-We foresee as well their use for further high-energy astrophysical applications, like e.g. the computation of the $\nu$-N deep-inelastic-scattering cross-section. At low $x$, the PROSA 2019 fit leads to a gluon PDF somehow suppressed with respect to the PROSA 2015 fit, which leads to a slight decrease of the prompt neutrino fluxes at high energies. An additional factor decreasing the predictions for prompt neutrinos at all energies is represented by the use of a new charm mass value in their computation, consistent with the charm mass value extracted within the PROSA 2019 fit, which turns out to be well compatible with the PDG value.  The PROSA 2019 and the PROSA 2015 predictions remain in any case very well compatible within the uncertainty bands, also reflecting the fact that the PROSA 2015 and PROSA 2019 gluon PDFs are similarly compatible.  The PROSA 2019 predictions on prompt neutrino fluxes are also compatible within uncertainty with other ones, using nuclear PDFs (instead of the $pp$ superposition model) and with the IceCube experimental upper limit on prompt neutrinos. 
+In this paper, the improved constraints on the parton distributions are presented, as obtained in a QCD analysis at NLO using the DIS and $pp$ collision data. In particular, the recent measurements of the LHCb and ALICE experiment of hadroproduction of charm and beauty-flavoured hadrons in the forward kinematic range provide additional sensitivity to the gluon distribution at low $x$. The assumptions on the initial parameterization of the gluon distribution are ivestigated, which is important for understanding of the low-$x$ behaviour of the gluon in the proton. The resulting PROSA2019 PDFs are extracted in FFNS and VFNS and are used to obtain improved predictions for the prompt atmospheric neutrino flux. The latter can be used in high-energy astrophysical applications, e.g. computation of the $\nu$-N deep-inelastic-scattering cross-section. At low $x$, the gluon distribution of the PROSA 2019 fit is suppressed with respect to the earlier PROSA 2015 result. This fact, together with a more consistent choice for the charm quark mass, leads to a decrease in the predicted prompt neutrino flux at high energies. The PROSA 2019 PDF and the respective neutrino flux predictions are consistent with the earlier PROSA results and have significantly improved accuracy. The presented neutrino flux predictions are also compatible with the calculations based on nuclear PDFs and with the results of the IceCube experiment. 
 
 
 \section*{Acknowledgements}
@@ -549,5 +546,6 @@ hospitality and its partial support during the completion of this work.
 
 
 \end{document}
+
 
 
