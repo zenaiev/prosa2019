@@ -67,7 +67,7 @@ Improved constraints on parton distributions using LHCb, ALICE and HERA heavy-fl
 \end{center}
  %\input{authors.tex}  
 \noindent
-O.~Zenaiev$^{1a}$, \mbox{M.V.~Garzelli}$^{2}$, K.~Lipka$^{3}$, \mbox{S.-O.~Moch}$^{1}$, A.~Cooper-Sarkar$^{4}$, F.~Olness$^{5}$, A.~Geiser$^{3}$, G.~Sigl$^{1}$\\
+O.~Zenaiev$^{1a*}$, \mbox{M.V.~Garzelli}$^{2}$, K.~Lipka$^{3}$, \mbox{S.-O.~Moch}$^{1}$, A.~Cooper-Sarkar$^{4}$, F.~Olness$^{5}$, A.~Geiser$^{3}$, G.~Sigl$^{1}$\\
 
 
 \noindent
@@ -81,6 +81,10 @@ O.~Zenaiev$^{1a}$, \mbox{M.V.~Garzelli}$^{2}$, K.~Lipka$^{3}$, \mbox{S.-O.~Moch}
 		$^{4}$University of Oxford\\
 		$^{5}$Southern Methodist University\\
 		$^{a}$now at CERN\\
+    
+    %\vspace{0.1cm}
+    \noindent
+		$^{*}$oleksandr.zenaiev@cern.ch\\
 	}
 }
 
@@ -120,7 +124,11 @@ as probability densities for partons to carry a fraction $x$ of the nucleon mome
 scale evolution of the PDFs is calculated in perturbative QCD (pQCD) using the DGLAP equations~\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs,Curci:1980uw,Furmanski:1980cm,Moch:2004pa,Vogt:2004mw}, the 
 $x$-dependence must be constrained from the experimental measurements. The constraining power of experimental data 
 on particular parton distribution is to a large extent defined by the acceptance of the experiment. Measurements of 
-neutral current (NC) and charged current (CC) cross sections in deep inelastic scattering (DIS) at HERA~\cite{Abramowicz:2015mha} probe the $x$ range of $10^{-4}<x<10^{-1}$, impose most significant constraints on the light quark PDFs and probe the gluon distribution via scaling violations. Additional constraints on the flavour separation of the quark sea and on the gluon distribution at low and high $x$ are obtained by using the measurements at fixed target experiments and in proton-(anti)proton collisions. Heavy-flavour production in proton-proton ($pp$) collisions at the LHC is dominated by gluon-gluon fusion, therefore corresponding measurements probe the gluon distribution directly. The measurements of forward charm~\cite{Aaij:2013mga} and beauty~\cite{Aaij:2013noa} production by the LHCb experiment at the centre-of-mass energy $\sqrt{s}=7$ TeV were used for the first time by the PROSA collaboration~\cite{Zenaiev:2015rfa} to improve constraints on the gluon distribution at $5 \times 10^{-6}< x < 10^{-4}$, in the region hardly covered by any other data to that date. The resulting PDFs (referred in the following as PROSA 2015) were further used to investigate the uncertainties in the predictions of prompt neutrino fluxes in the atmosphere~\cite{Garzelli:2016xmx}.       
+neutral current (NC) and charged current (CC) cross sections in deep inelastic scattering (DIS) at HERA~\cite{Abramowicz:2015mha} probe the $x$ range of $10^{-4}<x<10^{-1}$, impose most significant constraints on the light quark PDFs and probe the gluon distribution via scaling violations. Additional constraints on the flavour separation of the quark sea and on the gluon distribution at low and high $x$ are obtained by using the measurements at fixed target experiments and in proton-(anti)proton collisions. 
+Heavy-flavour production in proton-proton ($pp$) collisions at the LHC is dominated by gluon-gluon fusion, therefore corresponding measurements probe the gluon distribution directly~\cite{Zenaiev:2015rfa,Gauld:2015yia,Gauld:2016kpd,Bertone:2018dse}. 
+The measurements of forward charm~\cite{Aaij:2013mga} and beauty~\cite{Aaij:2013noa} production by the LHCb experiment at the centre-of-mass energy $\sqrt{s}=7$ TeV were used for the first time by the PROSA collaboration~\cite{Zenaiev:2015rfa} to improve constraints on the gluon distribution at $5 \times 10^{-6}< x < 10^{-4}$, in the region hardly covered by any other data to that date. 
+%The resulting PDFs (referred in the following as PROSA 2015) were further used to investigate the uncertainties in the predictions of prompt neutrino fluxes in the atmosphere~\cite{Garzelli:2016xmx}.       
+The resulting PDFs (PROSA 2015) were further used to predict the prompt neutrino flux from the decays of charmed mesons produced via cosmic ray interactions in the Earth's atmosphere~\cite{Garzelli:2016xmx}, which constitute an irreducible background in searches for the extraterrestrial neutrino flux by IceCube.
 
 Recent improvements in the precision of the HERA measurements~\cite{Abramowicz:2015mha,H1:2018flt}, new experimental data on heavy flavour production at the LHC at 
 different $\sqrt{s}$~\cite{Aaij:2015bpa,Aaij:2016jht,Acharya:2017jgo,Acharya:2019mgn}, together with new developments in the theory and improvements of the phenomenological tools, offer 
@@ -158,6 +166,7 @@ the QCDNUM programme~\cite{openqcdrad}.
 The description of the HERA data in the PDF fits improves in the kinematic range of small $x$ and low $Q^2$, by including higher twist effects~\cite{Accardi:2016ndt,Alekhin:2017kpj}
 or, alternatively, small $x$ resummation~\cite{Ball:2017otu,Abdolmaleki:2018jln}. 
 These upgrades are left for future analyses, once all necessary theoretical ingredients have become available. 
+On the other hand, we have checked to which extent the PDF fit results vary when changing the $Q^2_{\text{min}} = 3.5~\textrm{GeV}^2$ cut imposed on the HERA data and we have found that the uncertainty associated to its variation in the interval $2.5 \leq Q^2_\textrm{min}\leq 5.0~\textrm{GeV}^2$ is subdominant with respect to other uncertainties. This makes us confident that the explicit inclusion of higher-twist terms would not modify our PDF results in a substantial way.
 
 The theoretical predictions for the heavy-quark and inclusive HERA data are obtained using OPENQCDRAD~\cite{openqcdrad} code in the 
 fixed-flavour-number scheme (FFNS) with the three active flavours in the proton, following the Ref.~\cite{H1:2018flt}. 
