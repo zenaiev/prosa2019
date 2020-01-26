@@ -27,7 +27,7 @@ heavy-flavour production in DIS and $pp$ collisions for the determination of the
 The QCD analysis is performed at next-to-leading order (NLO) using the xFitter framework~\cite{Alekhin:2014irh}. 
 The updated combinations of the inclusive DIS cross sections~\cite{Abramowicz:2015mha} and of charm and beauty production cross sections~\cite{H1:2018flt} are used together with the measurements of charm and beauty hadroproduction in $pp$ scattering at the LHC. The latter include the measurements of charm hadroproduction by the LHCb collaboration at $\sqrt{s}$ = 5 TeV~\cite{Aaij:2016jht}, 7 TeV~\cite{Aaij:2013mga} and 13 TeV~\cite{Aaij:2015bpa}, and by ALICE at $\sqrt{s}$ = 5 TeV~\cite{Acharya:2019mgn} and 7 TeV~\cite{Acharya:2017jgo}. The measurements of beauty hadroproduction by LHCb at $\sqrt{s}$ = 7 TeV~\cite{Aaij:2013noa} are also used.
 
-The cross sections measured by LHCb and ALICE in each $p_T$ range are normalised in rapidity $y$, $\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T} / \left(\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T}\right)_{0}$. Here, $\left(\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T}\right)_{0}$ is the cross section in the central LHCb rapidity bin, $3 < y < 3.5$. 
+The cross sections measured by LHCb and ALICE in each $p_T$ range are normalised in rapidity $y$, $\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T} / \left(\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T}\right)_{0}$. Here, $\left(\frac{{\rm d}^2\sigma}{{\rm d}y{\rm d}p_T}\right)_{0}$ is the cross section in the central LHCb rapidity bin, $3 < y < 3.5$ {\color{blue}(the choice of this bin is arbitrary)}. 
 When normalising cross sections in this way, ALICE measurements at $|y| < 0.5$ are divided by the LHCb cross-section measurement in $3 < y < 3.5$.
 The advantage of using the normalised cross section, demonstrated in the earlier PROSA analysis~\cite{Zenaiev:2015rfa}, 
 is a significant reduction of the scale dependence in the theoretical prediction,  while retaining the sensitivity to 
@@ -190,7 +190,7 @@ The total PDF uncertainty is obtained by adding experimental, model, and paramet
 \label{sec:results}
 
 The quality of the overall fit can be judged based on the global $\chi^2$ divided by the number of degrees of freedom, $n_{dof}$. For each data set included in the fit, a partial $\chi^2$
-divided by the number of measurements (data points), $n_{dp}$, is provided. The correlated part of $\chi^2$ quantifies the influence of the correlated systematic uncertainties in the fit. The global and partial $\chi^2$ values for each data set are listed in Table~\ref{tab:chi}, illustrating a general agreement among all the data sets. The central values and the uncertainties of the fitted PDF parameters are given in Table~\ref{tab:pars}. 
+divided by the number of measurements (data points), $n_{dp}$, is provided. The correlated part of $\chi^2$ quantifies the influence of the correlated systematic uncertainties in the fit. The global and partial $\chi^2$ values for each data set are listed in Table~\ref{tab:chi}, {\color{blue}illustrating a satisfactory agreement among all the data sets (note that the $\chi^2$ expression does not include theoretical uncertainties)}. The central values and the uncertainties of the fitted PDF parameters are given in Table~\ref{tab:pars}. 
 The fitted masses of the heavy quarks are $m_c(m_c) = 1.230 \pm 0.031$ GeV, $m_b(m_b) = 3.977 \pm 0.100$~GeV. These values are a bit lower than, but consistent with, those obtained from the HERA data only~\cite{H1:2018flt}.
 The corresponding full set of other potential systematic uncertainties was not evaluated here.
 
@@ -277,8 +277,10 @@ The corresponding full set of other potential systematic uncertainties was not e
 The resulting PROSA 2019 PDFs with their total uncertainties at the scale $\mu^2_f=10$~GeV$^2$ are shown in Fig.~\ref{fig:pdfs}. These are compared to the result of the PROSA 2015 fit~\cite{Zenaiev:2015rfa}. In Fig.~\ref{fig:pdfratios} (left), the gluon distribution 
 normalised to the one from the PROSA 2015 fit is shown. The two results are in a very good agreement and a significant improvement 
 in the precision of the gluon PDF is achieved at $x < 10^{-4}$, as compared to the PROSA 2015 fit. 
+{\color{blue}This improvement is attributed mainly to the presence of the new LHCb data in the fit which extends the coverage to lower values of $x$.} 
 The valence and sea quark PDFs are in good agreement with the result of the HERAPDF2.0 analysis~\cite{Abramowicz:2015mha} and the 
 observed differences in these distributions to the PROSA 2015 analysis are attributed to the update of the DIS measurements~\cite{Aaron:2009aa} used in Ref.~\cite{Zenaiev:2015rfa} to the final combination~\cite{Abramowicz:2015mha} of the HERA data.
+{\color{blue}It turns out that once the LHCb data are included in the fit, the inclusion of ALICE data do not provide significant constraints on the PDFs, but since the ALICE data cover the central range of $y$, the consistent description of these data serves as a non-trivial self-consistency check of the fit using normalised cross sections.}
 
 The relative total, fit, model and parametrisation uncertainties for the gluon PDF are shown in Fig.~\ref{fig:pdfratios} (right). 
 The total uncertainties are dominated by the model uncertainties, with the largest contributions arising from the scale 
@@ -323,10 +325,19 @@ The specific matching thresholds in Eq.~(\ref{eq:thr}) are chosen to ensure that
 The choice of the matching thresholds is arbitrary and coincides with the renormalisation scheme choice of Ref.~\cite{Bertone:2017ehk}. 
 The results are proven to remain stable under variations of $3.1 \le \mu_Q/m_Q^{\textrm{pole}} \le 6$, whereby the $p_T$  cuts in the charm and beauty cross-section measurements of the LHC are modified accordingly. 
 
-In the VFNS variant of the PDF fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS. The resulting PDFs are available in the LHAPDF format at the PROSA web-site~\cite{prosaweb}. No PDF uncertainties are provided with this set.
+In the VFNS variant of the PDF fit, $\chi^2 = 2114$ is obtained for $n_{dof} = 1714$, indicating a similar quality of data description as compared to the fit in the FFNS {\color{blue}(consistent with the observations in Refs.~\cite{Abramowicz:2015mha,H1:2018flt}).} The resulting PDFs are available in the LHAPDF format at the PROSA web-site~\cite{prosaweb}. No PDF uncertainties are provided with this set.
 
 The performance of the PROSA 2019 VFNS PDFs is tested by computing predictions for the inclusive and multi-jet production in DIS~\cite{Chekanov:2002be,Chekanov:2006xr,Abramowicz:2010cka,Aktas:2007aa,Aaron:2010ac} 
 and jet~\cite{Chatrchyan:2012bja} and top quark-antiquark production~\cite{Sirunyan:2017azo,Sirunyan:2019zvx} in $pp$ collisions. The results collected at the PROSA web-site~\cite{prosaweb} are found to be similar to those using HERAPDF2.0 PDF.
+
+{\color{blue} In Fig.~\ref{fig:vfns} we compare the gluon distribution obtained in our fits in FFNS and VFNS with the NNPDF3.1 PDFs~\cite{Ball:2017nwa} and with the PDFs from Ref.~\cite{Bertone:2018dse} obtained using NLO calculations which also exploit the LHCb measurements of D-meson cross-section at 5, 7 and 13 TeV. The different fits are in good agreement.}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{figs/prosa-vfns.pdf}
+	\caption{The gluon distributions of PROSA 2019 FFNS and VFNS fits compared with the NNPDF3.1~\cite{Ball:2017nwa} PDFs and with the PDFs from Ref.~\cite{Bertone:2018dse} obtained using NLO calculations at the scale $\mu^2_f=10$~GeV$^2$.}
+	\label{fig:vfns}
+\end{figure}
 
 \section{Predictions for prompt atmospheric-neutrino fluxes}
 \label{sec:astro}
